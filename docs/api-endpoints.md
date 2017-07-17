@@ -27,6 +27,9 @@
 - `GET /api/photos/:id`
 - `PATCH /api/photos/:id`
 - `DELETE /api/photos/:id`
+- `GET /api/photos/:location`
+- `GET /api/photos/:category`
+- `GET /api/photos/:user_id`
 
 ### Follows
 

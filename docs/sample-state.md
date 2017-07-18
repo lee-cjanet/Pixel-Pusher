@@ -1,3 +1,4 @@
+```javascript
 {
   welcomepage: {
     img: "image_url",
@@ -42,3 +43,4 @@
     }
   },
 }
+```

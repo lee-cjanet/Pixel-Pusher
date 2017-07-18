@@ -27,11 +27,17 @@
 - `GET /api/photos/:id`
 - `PATCH /api/photos/:id`
 - `DELETE /api/photos/:id`
-- `GET /api/photos/:location`
-- `GET /api/photos/:category`
-- `GET /api/photos/:user_id`
 
 ### Follows
 
 - `POST /api/follows`
 - `DELETE /api/follows/:followingId`
+
+
+{
+  url: "/api/photos"
+  method: 'get'
+  data: { location_id: 1 }
+}
+
+Photo.where(location_id: params['location_id'])

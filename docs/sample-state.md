@@ -3,9 +3,8 @@
     img: "image_url",
     message: "welcome to pixel pusher"
   }
-  currentUser: {
-    id: 1,
-    username: "smile"
+  session: {
+    current_user: 1,
   },
   errors: {
     sessionForm: [],

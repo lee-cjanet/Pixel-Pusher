@@ -19,8 +19,8 @@ id          | integer   | not null, primary key
 url         | string    | not null
 title       | string    | not null
 user_id     | integer   | not null, foreign key (references users), indexed
-location    | string    | not null
-category    | string    | not null
+location    | string    | not null, indexed, unique
+category    | string    | not null, indexed, unique
 
 ## Follows
 column name | data type | details

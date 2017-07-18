@@ -69,13 +69,27 @@ Routes:
 
 
 mapStateToProps:
+  -img: diamond icon (DiscoverContainer)
 
+  -img: faint logo footer (FooterContainer)
+  -img: personal github/linked in icon  (PersonalConnectContainer)
+  -text: sign up/login/profile  (SessionFormContainer)
+
+  -img: pictures (DiscoverContainer)
+  -text: category name text (DiscoverContainer)
 
 mapDispatchToProps:
+  -fetchDiscoverCategoryPics
+  -createNewUser(username, pw)
+  -login(username, pw)
 
 
 Routes:
-
+  - /discover/:id   "DiscoverContainer"
+  - /user   "UserSignInContainer" "SessionFormContainer"
+  - /users/:userId"	  "UserProfileContainer"
+  - /github    "PersonalConnectContainer"
+  - /linkedin   "PersonalConnectContainer"
 
 
 

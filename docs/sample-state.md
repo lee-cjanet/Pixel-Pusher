@@ -2,23 +2,28 @@
 {
   current_user: {
     id: 1,
+    name: "Janet",
+    username: "smile",
+    following: boolean
+  },
+  user_detail: {
+    id: 1,
     username: "smile",
     name: "Janet",
     bio: "text goes here",
     profile_url: "profile_url",
     headshot_url_img: "headshot_url_img_url"
     cover_url: "profile_img_url",
+    teachers: [id1, id2, id3],
+    students: [id4, id5, id6]
   },
-  errors: {
-    sessionForm: [],
-    createPhoto: []
-  },
+  errors: [],
   images: {
     1: {
       id: 1,
       title: "This is a Tree",
       url: "/img/id",
-      // tags: [location, category, userId],
+      location_id: 2,
       user_id: 2
     }
   },
@@ -36,18 +41,18 @@
   //     nature: [img_id10, img_id11, img_id12]
   //   }
   // },
-  followers: {
+  teachers: {
     1: {
-      follower_id: 1,
+      student_id: 1,
       username: "superAwesomeName",
       name: "John Doe",
       profile_url: "profile_url",
       headshot_url_img: "headshot_url_img_url"
     }
   },
-  following: {
+  students: {
     1: {
-      follower_id: 1,
+      teacher_id: 1,
       username: "superDuperAwesomeName",
       name: "Luke Skywalker",
       profile_url: "profile_url",
@@ -63,7 +68,7 @@ photos: {
     title: "This is a Tree",
     url: /img_url/:id,
     user_id: 2,
-    <!-- tags: [1,2], -->
+    tags: [1,2],
     location_id: 4
   }
 }
@@ -71,7 +76,8 @@ photos: {
 tags: {
   1: {
     id: 1
-    name: "tree"
+    name: "nature",
+
   }
 }
 

@@ -1,10 +1,10 @@
 # PhotOn
 
-[Heroku link][heroku]
+<!-- [Heroku link][heroku] -->
 
 [Trello link][trello]
 
-[heroku]: "to be determine"
+<!-- [heroku]:  -->
 [trello]: https://trello.com/b/H6f7Lyib/pixel-pusher
 
 ## Minimum Viable Product
@@ -39,12 +39,12 @@ sufficient CSS styling:
 
 ### Phase 1: Backend setup and Front End User Authentication (2 days)
 
-**Objective:** Functioning rails project with front-end Authentication
+**Objective:** Functioning rails project with front-end Authentication, including login/sign in view with modal.
 
 ### Phase 2: Photos Model, API, and components (2 days)
 
 **Objective:** Photos can be uploaded, viewed, and destroyed through
-the API.
+the API. Homepage, category display page, cloudinary, upload, big picture view
 
 ### Phase 3: Profile Page (2 day)
 

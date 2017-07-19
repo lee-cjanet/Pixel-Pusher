@@ -16,8 +16,8 @@ const App = () => (
     <header>
       <h1>Pixel Pusher</h1>
     </header>
-        <AuthRoute path="/login" component={SessionFormContainer} />
-        <AuthRoute path="/signup" component={SessionFormContainer} />
+        <Route path="/login" component={SessionFormContainer} />
+        <Route path="/signup" component={SessionFormContainer} />
   </div>
 );
 

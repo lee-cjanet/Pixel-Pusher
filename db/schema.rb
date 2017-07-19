@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20170718182352) do
 
   create_table "photos", force: :cascade do |t|
     t.string   "title",       null: false
-    t.string   "url",         null: false
+    t.string   "image_url",   null: false
     t.integer  "user_id"
     t.integer  "location_id"
     t.datetime "created_at",  null: false
@@ -27,9 +27,8 @@ ActiveRecord::Schema.define(version: 20170718182352) do
 
   create_table "users", force: :cascade do |t|
     t.string   "username",        null: false
-    t.string   "name",            null: false
+    t.string   "name"
     t.text     "bio"
-    t.string   "profile_url"
     t.string   "cover_url"
     t.string   "headshot_url"
     t.string   "password_digest", null: false

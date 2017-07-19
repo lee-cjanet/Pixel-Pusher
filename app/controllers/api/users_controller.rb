@@ -6,13 +6,12 @@ class Api::UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-
+    # debugger
     if @user.save
-      sign_in(@user)
-      # redirect_to links_url
+      login(@user)
+      render "api/users/show"
     else
-      flash.now[:errors] = @user.errors.full_messages
-      # render :new
+      render json: @user.errors.full_messages, status: 422
     end
   end
 
@@ -20,6 +19,7 @@ class Api::UsersController < ApplicationController
   end
 
   private
+
   def user_params
     params.require(:user).permit(:password, :username)
   end

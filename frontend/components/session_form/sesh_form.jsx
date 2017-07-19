@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import Modal from 'react-modal';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -7,8 +8,12 @@ class SessionForm extends React.Component {
     this.state = {
       username: '',
       password: ''
+      // modalOpen: false
+      // formType: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+
+    // this.state = {modalOpen: false, formType: "signUp"};
   }
 
 
@@ -28,9 +33,13 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    console.log(user);
     this.props.processForm(user);
   }
+
+  // __handleClick(e) {
+  //   e.preventDefault();
+  //   this.setState({modalOpen: true, formType: formType})
+  // }
 
   renderErrors() {
     return(

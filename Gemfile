@@ -29,6 +29,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+#allows us to view Heroku logs and will precompile our assets
+gem 'rails_12factor'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

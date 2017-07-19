@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Modal from 'react-modal';
 
 import configureStore from './store/store';
 import Root from './components/root.jsx';
@@ -9,6 +10,10 @@ import RootReducer from './reducers/root_reducer';
 import { signup, login, logout } from './actions/session_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
+  Modal.setAppElement(document.body);
+  //what content to disable when modal is open
+  //currently set to disable html body
+
   let store;
   if (window.currentUser) {
     const preloadedState = { session: { currentUser: window.currentUser } };

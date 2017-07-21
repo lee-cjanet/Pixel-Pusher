@@ -23,10 +23,3 @@ const welcome = () => {
 
 
 export default welcome;
-
-
-
-//  background-image: url(http://)
-//
-// height: 100%
-// width: 100%

@@ -11,5 +11,8 @@ module Pixelpusher
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    CLOUD_NAME: "cloud name goes here"
+UPLOAD_PRESET: "upload preset goes here"
   end
 end

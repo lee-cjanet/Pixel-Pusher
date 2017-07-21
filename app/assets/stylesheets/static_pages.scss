@@ -1,3 +1,89 @@
 // Place all the styles related to the Static_Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Raleway+Dots|Amatica+SC|Poiret+One|Open+Sans');
+
+// font-family: 'Amatica SC', cursive;
+// font-family: 'Open Sans', sans-serif;
+
+// font-family: 'Poiret One', cursive;
+
+
+body {
+  font-family: 'Poiret One', cursive;
+  position: relative; //anything positioned absolute will be relative to body.
+}
+
+.welcome-container {
+  background-image: url("http://res.cloudinary.com/smilejl/image/upload/q_100/v1500589543/aperture-vintage-212345_gtnz6b.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.welcome-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  height: 90%;
+  color: #131D52;
+}
+
+.welcome-pixelpusher {
+  font-family: 'Amatica SC', cursive;
+  // font-family: 'Poiret One', cursive;
+  // font-weight: 200;
+  font-size: 60px;
+  color: #EDFD28;
+}
+
+.welcome-diamond {
+  font-size: 30px;
+}
+
+.welcome-photographers {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  letter-spacing: 8px;
+}
+
+
+.session-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // background-color: grey;
+  // height: 500px;
+  // width: 350px;
+  // margin-top: 40%;
+  // margin-left: 40%;
+  // margin-left: 90%;
+}
+
+.signInUp {
+  display: flex;
+  justify-content: space-around;
+  // align-items: center;
+  // flex-direction: column;
+  width: 170px
+}
+
+
+
+
+.modal-signin-button {
+  position: fixed;
+  // top: 500px;
+  right: 50px;
+  bottom: 50px;
+  // bottom: 5%;
+  // right: 5%;
+}

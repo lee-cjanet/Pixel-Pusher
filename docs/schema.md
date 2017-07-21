@@ -54,7 +54,7 @@ has_many :teacher, (following)
 column name | data type | details
 -------------|-----------|-----------------------
 id           | integer   | not null, primary key
-location     | string    | not null, index: unique: true
+location     | string    | not null
 
 has_many: :photos
 

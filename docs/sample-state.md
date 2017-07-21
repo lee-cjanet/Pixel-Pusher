@@ -21,6 +21,8 @@
   images: {
     1: {
       id: 1,
+      artist: "Jack",
+      artist_image_url: 
       title: "This is a Tree",
       url: "/img/id",
       location_id: 2,

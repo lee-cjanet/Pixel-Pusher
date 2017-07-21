@@ -9,7 +9,7 @@ class SessionForm extends React.Component {
       password: '',
     };
 
-    this.signin_handleSubmit = this.signin_handleSubmit.bind(this);
+    this.signup_handleSubmit = this.signup_handleSubmit.bind(this);
     this.login_handleSubmit = this.login_handleSubmit.bind(this);
     this.demo_handleSubmit = this.demo_handleSubmit.bind(this);
   }
@@ -27,10 +27,10 @@ class SessionForm extends React.Component {
     });
   }
 
-  signin_handleSubmit(e) {
+  signup_handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.signin(user);
+    this.props.signup(user);
   }
 
   login_handleSubmit(e) {
@@ -41,7 +41,7 @@ class SessionForm extends React.Component {
 
   demo_handleSubmit(e) {
     e.preventDefault();
-    const user = {username: "Janet", password: "123456"};
+    const user = {username: "smile", password: "123456"};
     this.props.login(user);
   }
 
@@ -83,7 +83,7 @@ class SessionForm extends React.Component {
             <br/><br/>
 
           <div className="signInUp">
-            <button onClick={this.signin_handleSubmit}> Sign Up </button>
+            <button onClick={this.signup_handleSubmit}> Sign Up </button>
             <button onClick={this.login_handleSubmit}> Login </button>
           </div>
           <br/>

@@ -42,6 +42,7 @@ class SessionModalForm extends React.Component {
   render() {
     let toggle_session;
     if (this.props.loggedIn) {
+      this.closeModal();
       toggle_session = (<button className="modal-signin-button" onClick={this.logout_handleSubmit}> Logout </button>);
     } else {
       toggle_session = (<button className="modal-signin-button" onClick={this.openModal}>Sign Up | Sign In</button>);

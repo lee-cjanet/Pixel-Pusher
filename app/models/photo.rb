@@ -6,12 +6,12 @@ class Photo < ApplicationRecord
   belongs_to :artist,
     primary_key: :id,
     foreign_key: :user_id,
-    class_name: "Users"
+    class_name: :User
 
   belongs_to :location,
     primary_key: :id,
     foreign_key: :location_id,
-    class_name: "Locations"
+    class_name: :Location
 
 
 

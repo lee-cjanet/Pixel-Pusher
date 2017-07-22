@@ -1,6 +1,6 @@
 export const fetchSinglePhoto = id => (
   $.ajax({
     method: 'GET',
-    url: `/api/session/${id}`
+    url: `/api/photos/${id}`
   })
 );

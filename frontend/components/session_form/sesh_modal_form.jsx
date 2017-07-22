@@ -58,7 +58,7 @@ class SessionModalForm extends React.Component {
           style={ sessionFormStyle }
           contentLabel="sessionForms">
 
-          <SessionForm errors={ this.props.errors } loggedIn={ this.props.loggedIn } login={ this.props.login } signup={ this.props.signup }/>
+          <SessionForm errors={ this.props.errors } login={ this.props.login } signup={ this.props.signup }/>
 
         </Modal>
       </div>

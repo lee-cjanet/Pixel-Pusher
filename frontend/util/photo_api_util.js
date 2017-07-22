@@ -4,3 +4,10 @@ export const fetchSinglePhoto = id => (
     url: `/api/photos/${id}`
   })
 );
+
+export const fetchAllPhotos = () => (
+  $.ajax({
+    method: 'GET',
+    url: '/api/photos/'
+  })
+);

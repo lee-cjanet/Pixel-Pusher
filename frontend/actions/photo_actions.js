@@ -1,8 +1,9 @@
 import * as APIUtil from '../util/photo_api_util';
 
-export const RECEIVE_SINGLE_PHOTO = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
+export const RECEIVE_SINGLE_PHOTO = 'RECEIVE_SINGLE_PHOTO';
+export const RECEIVE_ALL_PHOTOS = 'RECEIVE_ALL_PHOTOS'
 
 export const receiveErrors = errors => ({
   type: RECEIVE_ERRORS,
@@ -21,6 +22,20 @@ export const receiveSinglePhoto = (photo) => ({
 export const fetchSinglePhoto = id => dispatch => (
   APIUtil.fetchSinglePhoto(id).then(photo => {
     dispatch(receiveSinglePhoto(photo));
+    dispatch(clearErrors());
+  }, err => {
+    return (dispatch(receiveErrors(err.responseJSON)));
+  })
+);
+
+export const receiveAllPhotos = (photos) => ({
+  type: RECEIVE_ALL_PHOTOS,
+  photos
+});
+
+export const fetchAllPhotos = () => dispatch => (
+  APIUtil.fetchAllPhoto().then(photos => {
+    dispatch(receiveSinglePhoto(photos));
     dispatch(clearErrors());
   }, err => {
     return (dispatch(receiveErrors(err.responseJSON)));

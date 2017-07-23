@@ -1,3 +1,30 @@
 // Place all the styles related to the api::Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+.session-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.signInUp {
+  display: flex;
+  justify-content: space-around;
+  width: 170px
+}
+
+
+
+
+.modal-signin-button {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  color: #E3E0DD
+}

@@ -11,6 +11,7 @@ import {
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SessionFormContainer from './session_form/sesh_form_container';
 import Welcome from './welcome/welcome';
+import PhotosIndexContainer from './index/photos_index_container';
 
 // import Welcome from './welcome/welcome';
 
@@ -19,6 +20,7 @@ const App = () => (
     <SessionFormContainer />
     <switch>
       <Route path="/" component={Welcome} />
+      <Route path="/index" component={PhotosIndexContainer} />
     </switch>
   </div>
 );

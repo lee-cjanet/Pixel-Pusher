@@ -61,19 +61,11 @@ body {
   align-items: center;
   flex-direction: column;
   border-radius: 8px;
-  // background-color: grey;
-  // height: 500px;
-  // width: 350px;
-  // margin-top: 40%;
-  // margin-left: 40%;
-  // margin-left: 90%;
 }
 
 .signInUp {
   display: flex;
   justify-content: space-around;
-  // align-items: center;
-  // flex-direction: column;
   width: 170px
 }
 
@@ -82,9 +74,7 @@ body {
 
 .modal-signin-button {
   position: fixed;
-  // top: 500px;
   right: 50px;
   bottom: 50px;
-  // bottom: 5%;
-  // right: 5%;
+  color: #E3E0DD
 }

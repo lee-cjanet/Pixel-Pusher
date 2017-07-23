@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const welcome = () => {
   return (
     <div className="welcome-container">
-      <Link to="/login">
+      <Link to="/index">
         <ul className= "welcome-text-container">
           <label className="welcome-pixelpusher">
             p i x e l

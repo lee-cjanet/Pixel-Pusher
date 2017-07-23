@@ -17,10 +17,11 @@ const sessionFormStyle = {
     // right           : '10%',
     bottom          : '100px',
     right           : '50px',
-    padding         : '0px',
+    padding         : '8px',
     height          : '250px',
     width           : '200px',
-    zIndex          : 11
+    zIndex          : 11,
+    "border-radius" : '8px'
   }
 };
 

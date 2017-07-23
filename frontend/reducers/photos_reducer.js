@@ -1,6 +1,9 @@
 import merge from 'lodash/merge';
 
-import { RECEIVE_SINGLE_PHOTO, RECEIVE_ALL_PHOTOS } from '../actions/photo_actions';
+import {
+  RECEIVE_SINGLE_PHOTO,
+  RECEIVE_ALL_PHOTOS
+} from '../actions/photo_actions';
 
 const PhotosReducer = (state = null, action) => {
   Object.freeze(state);

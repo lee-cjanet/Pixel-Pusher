@@ -8,7 +8,8 @@ import Root from './components/root.jsx';
 // test
 import RootReducer from './reducers/root_reducer';
 import { signup, login, logout } from './actions/session_actions';
-import { fetchSinglePhoto, fetchAllPhotos } from './actions/photo_actions';
+import { fetchSinglePhoto, fetchAllPhotos, clearErrors, receiveErrors } from './actions/photo_actions';
+import { selectAllPhotos } from './reducers/selectors';
 
 document.addEventListener('DOMContentLoaded', () => {
   Modal.setAppElement(document.body);
@@ -28,11 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.signup = signup;
   // window.login = login;
   // window.logout = logout;
-  // window.store = store;
+  window.store = store;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.fetchAllPhotos = fetchAllPhotos;
   window.fetchSinglePhoto = fetchSinglePhoto;
+  window.clearErrors = clearErrors;
+  window.receiveErrors = receiveErrors;
+  window.selectAllPhotos = selectAllPhotos;
   //end test
 
   const root = document.getElementById('root');

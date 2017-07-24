@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
+  // window.react = React;
+
   // test
   // window.signup = signup;
   // window.login = login;

@@ -20,11 +20,11 @@ class SessionModalForm extends React.Component {
     this.logout_handleSubmit = this.logout_handleSubmit.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-  if (nextProps.loggedIn) {
-    this.props.history.push('/');
-  }
-}
+//   componentWillReceiveProps(nextProps) {
+//   if (nextProps.loggedIn) {
+//     this.props.history.push('/');
+//   }
+// }
 
   logout_handleSubmit(e) {
     e.preventDefault();

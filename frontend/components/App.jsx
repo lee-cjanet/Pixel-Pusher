@@ -18,10 +18,10 @@ import PhotosIndexContainer from './index/photos_index_container';
 const App = () => (
   <div className="container">
     <SessionFormContainer />
-    <switch>
-      <Route path="/" component={Welcome} />
+    <Switch>
       <Route path="/index" component={PhotosIndexContainer} />
-    </switch>
+      <Route path="/" component={Welcome} />
+    </Switch>
   </div>
 );
 

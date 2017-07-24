@@ -1,16 +1,12 @@
 import { values } from 'lodash';
 
 // { posts } === state.posts
-export const selectAllPhotos = ({ images }) => values(images);
+export const selectAllPhotos = ({ images }) => {
+  return values(images);
+};
 
 export const selectSinglePhoto = ({ images }, id) =>
 {
-  return images[id] || {};
+  const image = images.find(photo => photo.id === id);
+  return image || {};
 };
-
-// export const selectPokemonItem = ({ pokemonDetail }, itemId) => {
-//   const foundItem = pokemonDetail.items.find(item => item.id === itemId);
-//   return foundItem || {};
-// };
-//
-// export const selectAllPokemon = ({ pokemon }) => values(pokemon.entities);

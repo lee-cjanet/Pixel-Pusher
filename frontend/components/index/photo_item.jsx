@@ -37,7 +37,7 @@ class PhotoItem extends React.Component {
     const { imgId, title, imgUrl, artist, artistImgUrl } = this.props;
 
     let itemButton=(
-    <button onClick={this.openModal}>
+    <button className="item-button" onClick={this.openModal}>
       <li className="item">
         <img className="image" src={imgUrl} />
 

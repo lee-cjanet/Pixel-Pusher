@@ -16,17 +16,6 @@ class PhotosIndex extends React.Component {
     this.props.fetchAllPhotos();
   }
 
-  // divDivider() {
-  //
-  //   const num = Math.floor(images.length / 4);
-  //   return (
-  //     <div className="index-column-1">images.slice(0, num)</div>
-  //     <div className="index-column-2">images.slice(num, (num*2))</div>
-  //     <div className="index-column-3">images.slice((num*2), (num*3)</div>
-  //     <div className="index-column-4">images.slice((num*3))</div>
-  //   )
-  // }
-
 
   render() {
     let images = this.props.images;
@@ -40,7 +29,7 @@ class PhotosIndex extends React.Component {
 
     return (
       <div className="photos-index-container">
-        <h1> Difficult roads often lead to a beautiful destination. </h1>
+        <span className="quote"> Difficult     <br/>roads<br/> often  lead <br/>to a beautiful<br/> destination. </span>
 
         <Masonry className={"photos-index"}
           elementType={'ul'}

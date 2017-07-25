@@ -23,12 +23,14 @@ class SessionForm extends React.Component {
 
   signup_handleSubmit(e) {
     e.preventDefault();
+    this.closeModal();
     const user = this.state;
     this.props.signup(user);
   }
 
   login_handleSubmit(e) {
     e.preventDefault();
+    this.closeModal();
     const user = this.state;
     this.props.login(user);
   }
@@ -76,7 +78,7 @@ class SessionForm extends React.Component {
               />
             <br/><br/>
 
-          <div className="signInUp">
+          <div className="signInUp-button">
             <button onClick={this.signup_handleSubmit}> Sign Up </button>
             <button onClick={this.login_handleSubmit}> Login </button>
           </div>

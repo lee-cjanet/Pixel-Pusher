@@ -9,7 +9,6 @@ import {
 } from 'react-router-dom';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import SessionFormContainer from './session_form/sesh_form_container';
 import Welcome from './welcome/welcome';
 import PhotosIndexContainer from './index/photos_index_container';
 
@@ -17,7 +16,6 @@ import PhotosIndexContainer from './index/photos_index_container';
 
 const App = () => (
   <div className="container">
-    <SessionFormContainer />
     <Switch>
       <Route path="/index" component={PhotosIndexContainer} />
       <Route path="/" component={Welcome} />

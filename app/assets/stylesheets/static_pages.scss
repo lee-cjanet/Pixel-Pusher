@@ -14,14 +14,46 @@ body {
   position: relative; //anything positioned absolute will be relative to body.
 }
 
-.welcome-container {
-  background-image: url("http://res.cloudinary.com/smilejl/image/upload/v1500680432/2017-7-21/Greg/1_aperture-vintage-212345.jpg");
+.welcome-container2 {
+  position: relative;
+  background-image:
+   url(http://res.cloudinary.com/smilejl/image/upload/c_scale,w_1500/v1500932889/Splash%20page/3_warren-wong.jpg);
   height: 100vh;
   width: 100vw;
   background-position: center;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: .7s;
+  opacity: .8;
+}
+
+.welcome-container {
+  position: relative;
+  background-image: url(http://res.cloudinary.com/smilejl/image/upload/c_scale,w_1500/v1500939234/Splash%20page/1_aperture-vintage-212345.jpg);
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: .7s;
+}
+
+// .opacity-bar {
+//   height: 50px;
+//   top: 90%;
+//   opacity: .3;
+// }
+
+.welcome-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 }
 
 .welcome-text-container {
@@ -39,17 +71,29 @@ body {
 .welcome-pixelpusher {
   font-family: 'Amatica SC', cursive;
   font-size: 60px;
-  color: #EDFD28;
+  font-weight: 600;
+  color: #FAE437;
+  text-shadow: 2px 2px 3px #474747;
+}
+
+.welcome-pixelpusher:hover {
+  cursor: pointer;
 }
 
 .welcome-diamond {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .welcome-photographers {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   letter-spacing: 6px;
+  color: #f4f4f4;
+  // text-shadow: 1px 1px 2px #474747;
+}
+
+.welcome-photographers:hover {
+  cursor: pointer;
 }
 
 
@@ -61,17 +105,27 @@ body {
   border-radius: 8px;
 }
 
-.signInUp {
+.signInUp-button {
   display: flex;
   justify-content: space-around;
-  width: 170px
+  width: 170px;
+  color: #404040;
+}
+
+.signInUp-button:hover {
+  cursor: pointer;
+  text-shadow: 1px 1px 2px #404040;
 }
 
 
 .modal-signin-button {
   position: fixed;
-  right: 50px;
+  left: 50px;
   bottom: 50px;
-  color: #E3E0DD
+  color: #404040
+}
+
+.welcome-pixelpusher:hover {
+  cursor: pointer;
 }
 // =====================================

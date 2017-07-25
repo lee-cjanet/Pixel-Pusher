@@ -43,7 +43,7 @@ class PhotoItem extends React.Component {
 
         <div className="overlay">
           <span className="artist">
-            { artist }
+              { artist }
           </span>
         </div>
       </li>
@@ -63,7 +63,7 @@ class PhotoItem extends React.Component {
           <div className="photo-modal">
             <img className="image-detail" src={imgUrl} />
             <div className='image-info-detail'>
-              <h3 className='title-detail'>{ title} </h3>
+              <h3 className='title-detail'> "{ title }" </h3>
               <h3 className='artist-detail'>Artist: { artist }</h3>
             </div>
           </div>

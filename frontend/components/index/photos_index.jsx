@@ -24,7 +24,7 @@ class PhotosIndex extends React.Component {
 
     let masonryOptions = {
       transitionDuration: 1,
-      gutter: 30,
+      gutter: 0,
       fitWidth: true
     };
 

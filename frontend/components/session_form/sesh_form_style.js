@@ -15,13 +15,13 @@ const sessionFormStyle = {
     backgroundColor : 'rgba(225, 225, 225, 1)',
     position        : 'fixed',
     bottom          : '100px',
-    left           : '30px',
+    left            : '30px',
     padding         : '8px',
     height          : '250px',
     width           : '200px',
     zIndex          : 13,
-    "border-radius" : '8px',
-    "box-shadow"    : '2px 2x 5px #424242'
+    borderRadius    : '8px',
+    boxShadow       : '2px 2x 5px #424242'
   }
 };
 

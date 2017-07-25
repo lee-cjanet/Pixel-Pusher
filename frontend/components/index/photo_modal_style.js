@@ -12,10 +12,7 @@ const PhotoModalStyle = {
   },
   // content --> styling for the modal container
   content : {
-    // position                  : 'absolute',
-    // left                       : '50px',
-    // right                      : '15%',
-    margin                      : 'auto',
+    margin                     : 'auto',
     marginTop                  : '25px',
     border                     : '1px solid #B5B3B0',
     height                     : '70%',

@@ -25,14 +25,16 @@ class PhotosIndex extends React.Component {
     let masonryOptions = {
       transitionDuration: 1,
       gutter: 0,
-      fitWidth: true
+      fitWidth: false
     };
 
     return (
       <div className="photos-index-container">
-        <span className="quote"> Difficult     <br/>roads<br/> often  lead <br/>to a beautiful<br/> destination. </span>
+        <div className="sidenav">
+          <span className="quote"> Difficult     <br/>roads<br/> often  lead <br/>to a beautiful<br/> destination. </span>
 
-        <SessionFormContainer />
+          <SessionFormContainer />
+        </div>
 
         <Masonry className={"photos-index"}
           elementType={'ul'}

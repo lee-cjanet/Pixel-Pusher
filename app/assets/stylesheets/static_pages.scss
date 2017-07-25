@@ -17,7 +17,7 @@ body {
 .welcome-container2 {
   position: relative;
   background-image:
-   url(http://res.cloudinary.com/smilejl/image/upload/c_scale,w_1500/v1500932889/Splash%20page/3_warren-wong.jpg);
+   url(https://res.cloudinary.com/smilejl/image/upload/c_scale,w_1500/v1500932889/Splash%20page/3_warren-wong.jpg);
   height: 100vh;
   width: 100vw;
   background-position: center;
@@ -30,7 +30,7 @@ body {
 
 .welcome-container {
   position: relative;
-  background-image: url(http://res.cloudinary.com/smilejl/image/upload/c_scale,w_1500/v1500939234/Splash%20page/1_aperture-vintage-212345.jpg);
+  background-image: url(https://res.cloudinary.com/smilejl/image/upload/c_scale,w_1500/v1500939234/Splash%20page/1_aperture-vintage-212345.jpg);
   height: 100vh;
   width: 100vw;
   background-position: center;
@@ -86,44 +86,16 @@ body {
 
 .welcome-photographers {
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 6px;
   color: #f4f4f4;
-  // text-shadow: 1px 1px 2px #474747;
+  text-shadow: 0px 0px 1px #474747;
 }
 
 .welcome-photographers:hover {
   cursor: pointer;
 }
 
-
-.session-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 8px;
-}
-
-.signInUp-button {
-  display: flex;
-  justify-content: space-around;
-  width: 170px;
-  color: #404040;
-}
-
-.signInUp-button:hover {
-  cursor: pointer;
-  text-shadow: 1px 1px 2px #404040;
-}
-
-
-.modal-signin-button {
-  position: fixed;
-  left: 50px;
-  bottom: 50px;
-  color: #404040
-}
 
 .welcome-pixelpusher:hover {
   cursor: pointer;

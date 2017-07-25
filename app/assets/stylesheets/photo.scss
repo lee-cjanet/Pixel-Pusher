@@ -1,13 +1,15 @@
 .photos-index-container {
+  // display: flex;
+  // justify-content: center;
+}
+
+.sidenav {
+  position: fixed;
   display: flex;
-  justify-content: center;
-//   background-image: url("http://res.cloudinary.com/smilejl/image/upload/c_scale,w_3000/v1500681530/2017-7-21/Jared/ferriswheel.jpg");
-//   height: 100vh;
-//   width: 100vw;
-//   background-position: center;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
+  flex-direction: column;
+  align-content: space-between;
+  height: 100%;
+  padding: 10px;
 }
 
 .quote {
@@ -20,11 +22,12 @@
 .photos-index {
   display: flex;
   justify-content: center;
+  margin-left: 17%;
 }
 
 
 .item-button {
-  width: 270px;
+  width: 280px;
   padding: 5px;
 }
 // ===================================
@@ -51,24 +54,20 @@
   right: 5px;
   background-color: grey;
   overflow: hidden;
-  width: 97%;
   height: 0;
   transition: .5s ease;
   opacity: 0.6;
 }
 
 .item:hover .overlay {
-  height: 10%;
+  height: 20px;
 }
 
 .artist {
   white-space: nowrap;
   color: white;
   font-size: 15px;
-  position: absolute;
-  overflow: hidden;
   top: 50%;
-  left: 5%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }

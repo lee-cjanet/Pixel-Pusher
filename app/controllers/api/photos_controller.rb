@@ -30,7 +30,11 @@ class Api::PhotosController < ApplicationController
   end
 
   def index
-    @photos = Photo.all
+    if params[:user_id]
+      @photos = Photo.where(user_id: params[:user_id])
+    else
+      @photos = Photo.all
+    end
   end
 
   def destroy

@@ -3,7 +3,12 @@ import merge from 'lodash/merge';
 import { RECEIVE_USER_PROFILE, RECEIVE_USER_PHOTOS } from '../actions/profile_actions';
 
 const defaultState = {
-  user: null,
+  user: {
+    name: "",
+    bio: "",
+    cover_url: "http://res.cloudinary.com/smilejl/image/upload/c_scale,w_650/v1500680432/2017-7-21/Greg/1_aperture-vintage-212345.jpg",
+    headshot_url: "https://ak3.picdn.net/shutterstock/videos/6441428/thumb/1.jpg?i10c=img.resize(height:160)"
+  },
   images: null
 };
 

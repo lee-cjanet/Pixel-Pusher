@@ -12,7 +12,7 @@ const sessionFormStyle = {
   },
   // content --> styling for the modal container
   content : {
-    backgroundColor : 'rgba(225, 225, 225, 1)',
+    backgroundColor : 'white',
     position        : 'fixed',
     bottom          : '100px',
     left            : '30px',
@@ -21,7 +21,7 @@ const sessionFormStyle = {
     width           : '200px',
     zIndex          : 13,
     borderRadius    : '8px',
-    boxShadow       : '2px 2x 5px #424242'
+    "box-shadow"    : '2px 2x 4px darkslategrey'
   }
 };
 

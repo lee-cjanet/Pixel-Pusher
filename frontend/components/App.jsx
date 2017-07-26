@@ -11,12 +11,13 @@ import {
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Welcome from './welcome/welcome';
 import PhotosIndexContainer from './index/photos_index_container';
+import UserProfileContainer from './user_profile/user_profile_container';
 
-// import Welcome from './welcome/welcome';
 
 const App = () => (
   <div className="container">
     <Switch>
+      <Route exact path="/user/:id" component={UserProfileContainer} />
       <Route path="/index" component={PhotosIndexContainer} />
       <Route path="/" component={Welcome} />
     </Switch>

@@ -1,19 +1,54 @@
 User.destroy_all
 Photo.destroy_all
 
-user1 = User.create!(username: "smile", name: "Janet", password: "123456")
+user1 = User.create!(
+  username: "smile",
+  name: "Janet",
+  password: "123456",
+  bio: "Travel makes the year last longer",
+  headshot_url: "http://res.cloudinary.com/smilejl/image/upload/c_scale,w_200/v1501007387/profile%20pictures/janet_pixel_pusher.gif
+"
+  )
 
-user2 = User.create!(username: "pikachu", name: "Greg", password: "123456")
+user2 = User.create!(
+  username: "pikachu",
+  name: "Greg Park",
+  password: "123456",
+  bio: "I like to take pictures",
+  headshot_url: "http://res.cloudinary.com/smilejl/image/upload/c_scale,w_200/v1501007387/profile%20pictures/greg_pixel_pusher.gif"
+  )
 
-user3 = User.create!(username: "charmander", name: "Keith", password: "123456")
+user3 = User.create!(
+  username: "charmander",
+  name: "Keith",
+  password: "123456"
+)
 
 user4 = User.create!(username: "squirtle", name: "Jared", password: "123456")
 
-user5 = User.create!(username: "pinsir", name: "Daniel", password: "123456")
+user5 = User.create!(
+  username: "pinsir",
+  name: "Graham Paye",
+  password: "123456",
+  bio: "I enjoy long walks on the city streets",
+  headshot_url: "http://res.cloudinary.com/smilejl/image/upload/c_scale,w_200/v1501033634/profile%20pictures/graham_pixel_pusher.gif"
+)
 
-user11 = User.create!(username: "ditto", name: "Mei", password: "123456")
+user11 = User.create!(
+  username: "ditto",
+  name: "Jules",
+  password: "123456",
+  bio: "Everyday this & that",
+  headshot_url: "http://res.cloudinary.com/smilejl/image/upload/c_scale,w_200/v1501007386/profile%20pictures/jules_pixel_pusher.gif"
+  )
 
-user12 = User.create!(username: "eevee", name: "Evelyn", password: "123456")
+user12 = User.create!(
+  username: "eevee",
+  name: "Anastassia Bobokalonova",
+  password: "123456",
+  bio: "The little things",
+  headshot_url: "http://res.cloudinary.com/smilejl/image/upload/c_scale,w_200/v1501007387/profile%20pictures/imageedit_15_2995512351.gif"
+  )
 
 
 

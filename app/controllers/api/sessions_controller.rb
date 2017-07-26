@@ -17,10 +17,6 @@ class Api::SessionsController < ApplicationController
     end
   end
 
-  def show #profile
-    @user = User.find(params[:id])
-    @photos = Photo.where(user_id: params[:id])
-  end
 
   def update #edit cover photo/bio/name, headshot
   end

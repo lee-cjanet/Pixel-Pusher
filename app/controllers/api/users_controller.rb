@@ -14,6 +14,10 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def show #profile
+    @user = User.find(params[:id])
+  end
+
   def update #edit profile
   end
 

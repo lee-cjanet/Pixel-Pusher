@@ -47,6 +47,7 @@ export const createSinglePhoto = (image) => dispatch => (
     dispatch(receiveSinglePhoto(photo));
     dispatch(clearErrors());
   }, err => {
+    debugger
     return (dispatch(receiveErrors(err.responseJSON)));
   })
 );

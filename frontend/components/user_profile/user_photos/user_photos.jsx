@@ -28,7 +28,8 @@ class UserPhotos extends React.Component {
 
 
     return (
-        <Masonry className={"user-photos-container"}
+      <div className={"user-photos-container"}>
+        <Masonry
           elementType={'ul'}
           options={masonryOptions}
           disableImagesLoaded={ false }
@@ -41,6 +42,7 @@ class UserPhotos extends React.Component {
             />)}
 
         </Masonry>
+      </div>
     );
   }
 }

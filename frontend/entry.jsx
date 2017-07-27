@@ -9,6 +9,7 @@ import Root from './components/root.jsx';
 import RootReducer from './reducers/root_reducer';
 import { signup, login, logout } from './actions/session_actions';
 import { fetchSinglePhoto, fetchAllPhotos, clearErrors, receiveErrors } from './actions/photo_actions';
+import { fetchUserPhotos } from './actions/profile_actions';
 import { selectAllPhotos } from './reducers/selectors';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.clearErrors = clearErrors;
   window.receiveErrors = receiveErrors;
   window.selectAllPhotos = selectAllPhotos;
+  window.fetchUserPhotos = fetchUserPhotos;
   //end test
 
   const root = document.getElementById('root');

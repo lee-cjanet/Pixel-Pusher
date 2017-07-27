@@ -1,3 +1,122 @@
 // Place all the styles related to the api::Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//USER PROFILE
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-sec-2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15%;
+}
+
+.headshot {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid black;
+  // margin: 3px solid black;
+  // transform: translate(-);
+}
+
+.info-section {
+}
+
+.name {
+  font-family: 'Satisfy', cursive;
+  font-size: 53px;
+}
+
+.bio {
+  font-size: 21px;
+  color: #1F1F1F;
+  padding-top: 10px;
+}
+
+
+
+// ======================================
+// USER PHOTOS
+
+.user-photos-container {
+  display: flex;
+  height: 700px;
+  width: 100vw;
+  overflow: scroll;
+  justify-content: center;
+  padding-top: 20px;
+  border-style: solid;
+  border-top: thick double #424242;
+  background-color: #F0F0F0;
+  // margin-right: 200px;
+  // flex-wrap: wrap;
+}
+
+
+.image {
+  display: flex;
+  justify-content: center;
+}
+
+// .item-button:nth-child(3n+0) {
+//   display: flex; //so image will resize with container;
+//   flex: 1;
+//   height: 100%;
+//   overflow: hidden;
+//   background-color: pink;
+//   .image {
+//     flex: 1;
+//     flex-basis: 500px;
+//     // width: 100vw;
+//     // height: 100%;
+//   }
+// }
+
+// .item-button:nth-child(3n-1) {
+//   flex: 2;
+//   height: 100%;
+//   overflow: hidden;
+//   .image { //based on parent, height & width is 100% of modal-container
+//     flex: 2;
+    // width: 100vw;
+    // height: 100%;
+//   }
+// }
+
+// .item-button:nth-child(3n-2) {
+//   flex: 3;
+//   height: 100%;
+//   overflow: hidden; //if child is bigger, hide the space
+//   .image {
+//     flex: 3;
+//     // width: 100vw;
+//     // height: 100%;
+//   }
+// }
+//
+// .photo-modal-container {
+//   display: flex;
+//   flex: 1;
+//   flex-basis: 200px;
+//   max-height: 300px;
+// }
+//
+// .photo-modal-container:nth-child(3n-1) {
+//   display: flex;
+//   flex: 2;
+//   background-color: orange;
+//   flex-basis: 300px;
+// }
+//
+// .photo-modal-container:nth-child(3n-2) {
+//   display: flex;
+//   flex: 3;
+//   flex-basis: 400px;
+//   background-color: blue;
+// }

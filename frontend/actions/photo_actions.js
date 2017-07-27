@@ -41,3 +41,12 @@ export const fetchAllPhotos = () => dispatch => (
     return (dispatch(receiveErrors(err.responseJSON)));
   })
 );
+
+export const createSinglePhoto = (image) => dispatch => (
+  APIUtil.createSinglePhoto(image).then(photo => {
+    dispatch(receiveSinglePhoto(photo));
+    dispatch(clearErrors());
+  }, err => {
+    return (dispatch(receiveErrors(err.responseJSON)));
+  })
+);

@@ -3,8 +3,8 @@ import { withRouter } from 'react-router-dom';
 import Masonry from 'react-masonry-component';
 const shuffle = require('knuth-shuffle').knuthShuffle;
 
-import PhotoItem from './photo_item';
 import SessionFormContainer from '../session_form/sesh_form_container';
+import PhotoDetail from '../photo_detail/photo_detail';
 // import InfiniteScroll from 'infinite-scroll';
 
 class PhotosIndex extends React.Component {
@@ -19,8 +19,7 @@ class PhotosIndex extends React.Component {
 
 
   render() {
-    let images = this.props.images;
-    images = shuffle(images);
+    let images = shuffle(this.props.images);
 
     let masonryOptions = {
       transitionDuration: 1,
@@ -43,13 +42,9 @@ class PhotosIndex extends React.Component {
           updateOnEachImageLoad={ false }
           >
           {images.map(image =>
-            <PhotoItem
+            <PhotoDetail
               key={ image.id }
-              imgId={ image.id }
-              title={ image.title }
-              imgUrl={ image.image_url}
-              artist={ image.artist }
-              artistImgUrl= { image.artist_image_url }
+              image={ image }
               />)}
           )}
         </Masonry>

@@ -11,3 +11,11 @@ export const fetchAllPhotos = () => (
     url: '/api/photos/'
   })
 );
+
+export const createSinglePhoto = (image) => (
+  $.ajax({
+    method: 'POST',
+    url: '/api/photos',
+    data: { image }
+  })
+);

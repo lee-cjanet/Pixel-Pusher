@@ -5,12 +5,6 @@ export const selectAllPhotos = ({ images }) => {
   return values(images);
 };
 
-export const selectSinglePhoto = ({ images }, id) =>
-{
-  const image = images.find(photo => photo.id === id);
-  return image || {};
-};
-
 export const selectAllUserPhotos = ({ images }) => {
   return values(images);
 };

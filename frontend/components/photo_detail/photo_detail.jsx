@@ -2,8 +2,40 @@ import React from 'react';
 import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
 
-import PhotoModalStyle from './photo_modal_style';
 import PhotosIndex from '../index/photos_index';
+
+
+
+const style = {
+  // overlay --> styling for the "screen" behind the modal
+  overlay : {
+    position        : 'fixed',
+    top             : 0,
+    left            : 0,
+    right           : 0,
+    bottom          : 0,
+    backgroundColor : 'rgba(0, 0, 0, 0.60)',
+    zIndex          : 10
+  },
+  // content --> styling for the modal container
+  content : {
+    position                   : 'relative',
+    margin                     : 'auto',
+    marginTop                  : '25px',
+    border                     : '1px solid #B5B3B0',
+    height                     : '450px',
+    overflow                   : 'auto',
+    width                      : '875px',
+    WebkitOverflowScrolling    : 'touch',
+    borderRadius               : '4px',
+    outline                    : 'none',
+    padding                    : '20px',
+    backgroundColor            : 'white',
+    zIndex                     : 11
+  }
+};
+
+
 
 class PhotoDetail extends React.Component {
   constructor(props) {
@@ -52,7 +84,7 @@ class PhotoDetail extends React.Component {
           <Modal
             isOpen={this.state.modalOpen}
             onRequestClose={this.closeModal}
-            style={ PhotoModalStyle }
+            style={ style }
             contentLabel="PhotoDetailModal">
 
             <div className="photo-modal">

@@ -101,10 +101,20 @@
   // flex-wrap: wrap;
 }
 
+// .user-photos-container .masonry-container {
+//   width: 100vw;
+// }
+
+.user-photos-container .masonry-container .photo-modal-container .item-button {
+  padding: 5px;
+}
+
 
 .image {
   display: flex;
   justify-content: center;
+  width: 350px;
+  height: auto;
 }
 
 // .item-button:nth-child(3n+0) {

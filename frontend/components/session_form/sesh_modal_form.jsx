@@ -4,7 +4,34 @@ import Modal from 'react-modal';
 import { withRouter } from 'react-router-dom';
 
 import SessionForm from './sesh_form';
-import sessionFormStyle from './sesh_form_style';
+
+
+
+const style = {
+  // overlay --> styling for the "screen" behind the modal
+  overlay : {
+    position        : 'fixed',
+    top             : 0,
+    left            : 0,
+    right           : 0,
+    bottom          : 0,
+    backgroundColor : 'rgba(66, 66, 66, 0.60)',
+    zIndex          : 10
+  },
+  // content --> styling for the modal container
+  content : {
+    backgroundColor : 'white',
+    position        : 'fixed',
+    bottom          : '100px',
+    left            : '30px',
+    padding         : '22px 22px 44px 22px',
+    height          : '250px',
+    width           : '200px',
+    zIndex          : 13,
+    borderRadius    : '8px',
+    "box-shadow"    : '2px 2x 4px darkslategrey'
+  }
+};
 
 
 class SessionModalForm extends React.Component {
@@ -56,7 +83,7 @@ class SessionModalForm extends React.Component {
         <Modal className="session-modal"
           isOpen={this.state.modalOpen}
           onRequestClose={this.closeModal}
-          style={ sessionFormStyle }
+          style={ style }
           contentLabel="sessionForms">
 
           <SessionForm errors={ this.props.errors } login={ this.props.login } signup={ this.props.signup } />

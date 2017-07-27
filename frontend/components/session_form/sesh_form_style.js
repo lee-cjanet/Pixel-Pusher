@@ -16,7 +16,7 @@ const sessionFormStyle = {
     position        : 'fixed',
     bottom          : '100px',
     left            : '30px',
-    padding         : '8px',
+    padding         : '22px 22px 28px 22px',
     height          : '250px',
     width           : '200px',
     zIndex          : 13,

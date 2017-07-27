@@ -20,11 +20,12 @@ class SessionModalForm extends React.Component {
     this.logout_handleSubmit = this.logout_handleSubmit.bind(this);
   }
 
-//   componentWillReceiveProps(nextProps) {
-//   if (nextProps.loggedIn) {
-//     this.props.history.push('/');
-//   }
-// }
+  componentWillReceiveProps(nextProps) {
+  if (nextProps.loggedIn) {
+    this.closeModal();
+    // this.props.history.push('/');
+  }
+}
 
   logout_handleSubmit(e) {
     e.preventDefault();
@@ -42,6 +43,7 @@ class SessionModalForm extends React.Component {
   render() {
     let toggle_session;
     if (this.props.loggedIn) {
+      // this.closeModal();
       toggle_session = (<button className="modal-signin-button" onClick={this.logout_handleSubmit}> logout </button>);
     } else {
       toggle_session = (<button className="modal-signin-button" onClick={this.openModal}>sign up/sign in</button>);

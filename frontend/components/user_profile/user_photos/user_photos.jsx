@@ -13,6 +13,10 @@ class UserPhotos extends React.Component {
     this.props.fetchUserPhotos(this.props.userId);
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({ images: nextProps.images });
+  }
+
   render() {
     const { images } = this.props;
 

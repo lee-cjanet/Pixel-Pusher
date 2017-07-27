@@ -39,7 +39,9 @@ class welcome extends React.Component {
             </Link>
               <br/>
             <Link to="/index">
-              <label className="welcome-photographers">
+              <label className="welcome-photographers"
+                onMouseEnter={this.onMouseEnterHandler}
+                onMouseLeave={this.onMouseLeaveHandler}>
                 from photographers, to photographers
               </label>
             </Link>

@@ -76,12 +76,12 @@ class SessionForm extends React.Component {
               />
             <br/><br/>
 
-          <div className="signInUp-button">
-            <button onClick={this.signup_handleSubmit}> Sign Up </button>
-            <button onClick={this.login_handleSubmit}> Login </button>
+          <div className="login-button-wrapper">
+            <button className="signInUp-button" onClick={this.signup_handleSubmit}> Sign Up </button>
+            <button className="signInUp-button" onClick={this.login_handleSubmit}> Login </button>
           </div>
           <br/>
-          <button onClick={this.demo_handleSubmit}> Demo </button>
+          <button className="signInUp-button" onClick={this.demo_handleSubmit}> Demo </button>
 
         </div>
       </div>

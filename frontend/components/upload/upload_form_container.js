@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
-import { createSinglePhoto } from '../../actions/photo_actions';
+import { createSinglePhoto, receiveErrors } from '../../actions/photo_actions';
 import UploadForm from './upload_form';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    errors: state.pins.errors,
+    errors: state.errors,
     currentUser: state.session.currentUser,
     ownProps
   };

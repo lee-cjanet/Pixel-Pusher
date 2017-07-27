@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import UserPhotos from './user_photos/user_photos_container';
+import UploadModal from '../upload/upload_modal';
 
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
   }
 
   componentDidMount() {
@@ -13,11 +13,10 @@ class UserProfile extends React.Component {
     this.props.fetchUserPhotos(this.props.match.params.id);
   }
 
+
   render() {
     let { id, name, bio, headshot_url, cover_url } = this.props.user;
 
-
-    // headshot_url || headshot_url =  "https://ak3.picdn.net/shutterstock/videos/6441428/thumb/1.jpg?i10c=img.resize(height:160)";
 
     // cover_url || cover_url = "http://res.cloudinary.com/smilejl/image/upload/c_scale,w_650/v1500680432/2017-7-21/Greg/1_aperture-vintage-212345.jpg";
 
@@ -41,6 +40,7 @@ class UserProfile extends React.Component {
           </div>
         </div>
 
+        <UploadModal />
         <UserPhotos userId={id}/>
 
       </div>

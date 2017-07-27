@@ -7,18 +7,22 @@
 .profile-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile-sec-2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 15%;
+  padding-top: 133px;
+  padding-bottom: 110px;
+  width: 90vw;
 }
 
 .headshot {
-  width: 200px;
-  height: 200px;
+  width: 274px;
+  height: 274px;
   border-radius: 50%;
   border: 3px solid black;
   // margin: 3px solid black;
@@ -26,6 +30,7 @@
 }
 
 .info-section {
+  width: 300px;
 }
 
 .name {
@@ -34,9 +39,47 @@
 }
 
 .bio {
-  font-size: 21px;
+  font-size: 19px;
   color: #1F1F1F;
   padding-top: 10px;
+}
+
+
+
+// =====================================
+// UPLOAD SECTION
+
+// .upload-button {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-size: 25px;
+//   font-weight: 900;
+//   padding-left: 12px;
+//   padding-bottom: 8px;
+//   border-top: 2px;
+//   font-color: white;
+//   background: black;
+//   margin: 25px;
+//   border-radius: 50px;
+//   box-shadow: 3px 3px 5px darkgrey;
+// }
+
+
+.upload-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 900;
+  padding-left: 12px;
+  padding-bottom: 8px;
+  border-top: 2px solid black;
+  font-color: black;
+  margin: 25px;
+  border-top: 2px black;
+
+  // box-shadow: 3px 3px 5px darkgrey;
 }
 
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import { Link } from 'react-router-dom';
 
 import PhotoModalStyle from './photo_modal_style';
 import PhotosIndex from '../index/photos_index';
@@ -11,6 +12,7 @@ class PhotoDetail extends React.Component {
     this.state = {
       modalOpen: false,
     };
+    console.log(this.props);
 
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
@@ -27,21 +29,23 @@ class PhotoDetail extends React.Component {
 
 
   render() {
-    const { image_url, title, artist, artist_image_url } = this.props.image;
+    const { user_id, image_url, title, artist, artist_image_url } = this.props.image;
 
     let itemButton=(
       <button className="item-button" onClick={this.openModal}>
+        <li className="item">
           <img className="image" src={image_url} />
           <div className="overlay">
             <span className="artist">
-              <img className="artist-img" src={ artist_image_url } />
               { artist }
             </span>
           </div>
+        </li>
       </button>
     );
 
     return(
+
       <div className="photo-modal-container">
         { itemButton }
 
@@ -54,9 +58,15 @@ class PhotoDetail extends React.Component {
             <div className="photo-modal">
               <img className="image-detail" src={image_url} />
               <div className='image-info-detail'>
+
                 <h3 className='title-detail'> "{ title }" </h3>
+
+              <Link to={`/user/${user_id}`}>
                 <img className="artist-image" src={artist_image_url} />
-                <h3 className='artist-detail'>Artist: { artist }</h3>
+              </Link>
+              <Link to={`/user/${user_id}`}>
+                <h3>Artist: { artist }</h3>
+              </Link>
               </div>
             </div>
           </Modal>
@@ -67,3 +77,6 @@ class PhotoDetail extends React.Component {
 }
 
 export default PhotoDetail;
+
+
+// <img className="artist-img" src="{ artist_image_url }" />

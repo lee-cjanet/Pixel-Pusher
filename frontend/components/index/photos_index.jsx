@@ -46,9 +46,9 @@ class PhotosIndex extends React.Component {
               key={ image.id }
               image={ image }
               />)}
-          )}
         </Masonry>
       </div>
+
     );
   }
 

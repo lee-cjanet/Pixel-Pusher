@@ -6,6 +6,7 @@ class Api::UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.name = user_params[:username]
     @user.headshot_url ||= "http://res.cloudinary.com/smilejl/image/upload/v1501098612/profile%20pictures/IMG_2023.png"
     # @user.location_id = Location.find(location: params[:location]).id
     # @user.location_id ||= 1

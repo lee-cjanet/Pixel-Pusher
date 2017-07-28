@@ -25,14 +25,14 @@ user3 = User.create!(
   headshot_url: "http://res.cloudinary.com/smilejl/image/upload/v1501098612/profile%20pictures/IMG_2023.png"
 )
 
-user4 = User.create!(
+user5 = User.create!(
   username: "squirtle",
   name: "Jared",
   password: "123456",
   headshot_url: "http://res.cloudinary.com/smilejl/image/upload/v1501098612/profile%20pictures/IMG_2023.png"
   )
 
-user5 = User.create!(
+user4 = User.create!(
   username: "pinsir",
   name: "Graham Paye",
   password: "123456",

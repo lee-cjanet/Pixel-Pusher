@@ -1,10 +1,10 @@
-# PhotOn
+# Pixel Pusher
 
-<!-- [Heroku link][heroku] -->
+[Heroku link][heroku]
 
 [Trello link][trello]
 
-<!-- [heroku]:  -->
+[heroku]: https://pixelpusher.herokuapp.com
 [trello]: https://trello.com/b/H6f7Lyib/pixel-pusher
 
 ## Minimum Viable Product

@@ -1,7 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-// import ModalStyle from 'modal_style';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 import SessionForm from './sesh_form';
 
@@ -68,10 +67,21 @@ class SessionModalForm extends React.Component {
   }
 
   render() {
+    const { id, name, headshot_url } = this.props.currentUser;
+
     let toggle_session;
+
     if (this.props.loggedIn) {
-      // this.closeModal();
-      toggle_session = (<button className="modal-signin-button" onClick={this.logout_handleSubmit}> logout </button>);
+      toggle_session = (
+        <div className="logout-toggle">
+            <Link className ="personal-profile-link" to={`/user/${id}`}>
+              <img className="artist-image" src={ headshot_url } />
+              { name }
+            </Link>
+            <button className="modal-signout-button" onClick={this.logout_handleSubmit}>
+              logout
+            </button>
+        </div>);
     } else {
       toggle_session = (<button className="modal-signin-button" onClick={this.openModal}>sign up/sign in</button>);
     }

@@ -12,8 +12,8 @@ class UploadForm extends React.Component {
     super(props);
     this.state = {
       title: '',
-      image_url: '',
-      location: ''
+      image_url: ''
+      // location: 1
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
@@ -28,15 +28,11 @@ class UploadForm extends React.Component {
     });
   }
 
-  addImage(image) {
-    this.setState({image_url: image.image_url});
-  }
-
   handleSubmit(e) {
     e.preventDefault();
-    const image = Object.assign({}, this.state);
-    this.props.createSinglePhoto({ image });
-    this.props.ownProps.closeModal();
+    const photo = Object.assign({}, this.state);
+    this.props.createSinglePhoto({ photo });
+    // this.props.ownProps.closeModal();
   }
 
   handleImageUpload(image) {
@@ -90,7 +86,7 @@ class UploadForm extends React.Component {
           <span className='top-message'>
             <h1>Capture + Share</h1>
             <h2>aka
-              <span className="upload-text"> u p l o a d </span>
+              <span className="upload-text">  &nbsp; upload &nbsp;</span>
               here
             </h2>
            </span>
@@ -106,31 +102,25 @@ class UploadForm extends React.Component {
               {this.displayPicture()}
             </Dropzone>
 
+
             <div className='input-area'>
+
+              <input className="modal-upload-button" type="submit" value={'create.'} />
+
               <span className="upload-errors">{ this.renderErrors() }</span>
 
-              <label>
-                <span>Title</span>
+              <div className="text-input-container">
+                <label className="text-input">
+                  Title
+                  <br/>
+                  <input type="text"
+                    value={this.state.title}
+                    onChange={this.update('title')}
+                  />
+                </label>
                 <br/>
-                <input type="text"
-                  className="upload-title-input"
-                  value={this.state.title}
-                  onChange={this.update('title')}
-                />
-              </label>
-              <br/>
 
-              <label>
-                <span>Location (optional)</span>
-                <br/>
-                <input type="text"
-                  className="location-input"
-                  value={this.state.location}
-                  onChange={this.update('location')}
-                />
-              </label>
-
-              <input className="upload-button" type="submit" value={'create.'} />
+              </div>
             </div>
           </div>
         </form>
@@ -141,3 +131,13 @@ class UploadForm extends React.Component {
 }
 
 export default UploadForm;
+
+
+// <label className="text-input">
+//   Location (optional)
+//   <br/>
+//   <input type="text"
+//     value={this.state.location}
+//     onChange={this.update('location')}
+//   />
+// </label>

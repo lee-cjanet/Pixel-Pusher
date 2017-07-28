@@ -27,11 +27,13 @@
   border: 1px solid;
   border-radius: 4px;
   padding: 4px 6px;
+  font-size: 20px;
 }
 
 .signInUp-button:hover {
   cursor: pointer;
-  text-shadow: 1px 1px 2px #404040;
+  // text-shadow: 1px 1px 2px #404040;
+  // font-size: 23px;
 }
 
 
@@ -40,4 +42,22 @@
   left: 10%;
   bottom: 5%;
   color: #404040
+}
+
+.modal-signin-button:hover {
+  cursor: pointer;
+  // font-size: 23;
+}
+
+
+.modal-signout-button {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #424242;
+  padding: 4px;
+}
+
+.modal-signout-button:hover {
+  // color: #00C000;
+  cursor: pointer;
 }

@@ -47,6 +47,11 @@ class UploadModal extends React.Component {
     this.openModal = this.openModal.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+  if (nextProps) {
+    this.closeModal();
+  }
+}
 
   closeModal() {
     this.setState({ modalOpen: false });

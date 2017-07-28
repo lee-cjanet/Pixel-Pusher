@@ -3,12 +3,18 @@ class Api::PhotosController < ApplicationController
   def create
     @photo = Photo.new(photo_params)
     @photo.user_id = current_user.id
-    # location_id = Location.where(id: params[:location])
+
+    location = Location.find_by(location: photo_params[:location])
+    unless location
+      location = location.find_by(location: "none selected")
+    end
+    @photo.location = location #.location is using association from modal
+
 
     if @photo.save
       render "api/photos/show"
     else
-      render json: @photo.errors.full_messages, status:422
+      render json: @photo.errors.full_messages, status: 422
     end
 
   end

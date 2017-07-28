@@ -1,11 +1,22 @@
+
 .upload-form-container {
+  border: 2px solid pink;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid pink;
   height: 100%;
   width: 100%;
 }
+
+.upload-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
 .upload-errors {
   font-color: red;
   border: 2px red;
@@ -18,21 +29,40 @@
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  width: 100%;
+  width: 46%;
 }
 
-h1 {
+.upload-form-container h1 {
   font-size: 37px;
 }
 
+
 h2 {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   font-size: 18px;
+  width:100%;
+  overflow:hidden;
+}
+
+h2 p {
+  animation: slide-left 4s;
+}
+
+@keyframes h2 {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 .upload-text {
-  font-weight: bold;
+  font-size: 20px;
 }
 
 
@@ -42,6 +72,7 @@ h2 {
 .image-n-input {
   display: flex;
   justify-content: space-between;
+  padding: 44px;
 }
 
 
@@ -49,19 +80,61 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
+  border: 2px dashed #424242;
   height: 300px;
   width: 300px;
   border-radius: 50%;
+  padding: 15px;
+}
+
+dropzone-text-container:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 4px #424242;
+}
+
+.create-thumbnail {
+  box-shadow: 2px 2px 5px #424242;
 }
 
 
 .input-area {
   display: flex;
-  align-items: center;
-  border: 2px solid blue;
+  align-items: flex-end;
+  flex-direction: column;
+  padding-left: 15px;
 }
 
-// .upload-button {
-//
-// }
+.modal-upload-button {
+  border: 1px solid #424242;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 3px;
+  margin: 11px;
+}
+
+.modal-upload-button:hover {
+  cursor:pointer;
+  box-shadow: 2px 2px 4px #424242;
+}
+
+.text-input-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 22px;
+  height: 100%;
+}
+
+.text-input {
+  padding-top: 30px;
+}
+
+input[type=text] {
+  border: 1px solid #424242;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+input[type=text]:focus {
+  background-color: #B8B8B8
+}

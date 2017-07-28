@@ -14,7 +14,6 @@ class Photo < ApplicationRecord
     class_name: :Location
 
 
-
   # def self.find_by_location(id)
     # location = self.where({ location_id: id, email: "smile@yahoo.com"})
     # self is the name Photos db

@@ -44,7 +44,6 @@ class PhotoDetail extends React.Component {
     this.state = {
       modalOpen: false,
     };
-    console.log(this.props);
 
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
@@ -94,10 +93,7 @@ class PhotoDetail extends React.Component {
                 <h3 className='title-detail'> "{ title }" </h3>
 
               <Link to={`/user/${user_id}`}>
-                <img className="artist-image" src={artist_image_url} />
-              </Link>
-              <Link to={`/user/${user_id}`}>
-                <h3>Artist: { artist }</h3>
+                <img className="artist-image" src={artist_image_url} />{ artist }
               </Link>
               </div>
             </div>

@@ -100,16 +100,12 @@
 }
 
 
-.user-photos-container .masonry-container .photo-modal-container .item-button {
-  padding: 5px;
-}
-
-
-.image {
+.user-photos-container .photo-modal-container .item-button .item .image {
   display: flex;
   justify-content: center;
   width: 350px;
   height: auto;
+  padding: 2px;
 }
 
 // .item-button:nth-child(3n+0) {

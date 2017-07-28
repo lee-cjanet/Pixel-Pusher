@@ -47,7 +47,9 @@
 
 
 // =====================================
-// UPLOAD SECTION
+// NAV BAR
+
+
 
 // .upload-button {
 //   display: flex;
@@ -66,10 +68,11 @@
 // }
 
 
-.upload-button {
+.links-nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  width: 100vw;
   font-size: 25px;
   font-weight: 900;
   padding-left: 12px;

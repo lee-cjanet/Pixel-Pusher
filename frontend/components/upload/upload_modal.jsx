@@ -66,7 +66,7 @@ class UploadModal extends React.Component {
 
     let uploadButton=(
       <button className="upload-button" onClick={this.openModal}>
-        - upload -
+        upload
       </button>
     );
 

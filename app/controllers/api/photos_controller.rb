@@ -9,6 +9,8 @@ class Api::PhotosController < ApplicationController
       location = location.find_by(location: "none selected")
     end
     @photo.location = location #.location is using association from modal
+    #later create a factory method for photo
+    # photo.create_by_location_name
 
 
     if @photo.save

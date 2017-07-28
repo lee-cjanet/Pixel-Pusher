@@ -16,7 +16,6 @@ class FollowButton extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props);
     this.props.fetchGurus(this.props.userId);
     this.props.fetchFollowers(this.props.userId);
   }

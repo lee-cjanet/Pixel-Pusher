@@ -8,7 +8,6 @@ import FollowButtonContainer from '../follows/follows_container';
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
   }
 
   componentDidMount() {

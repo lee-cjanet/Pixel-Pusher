@@ -57,6 +57,14 @@ user12 = User.create!(
 
 location1 = Location.create!(location: "none selected")
 
+Follow.create!(guru_id: user1.id, follower_id: user2.id)
+
+Follow.create!(guru_id: user2.id, follower_id: user3.id)
+
+Follow.create!(guru_id: user3.id, follower_id: user1.id)
+
+Follow.create!(guru_id: user1.id, follower_id: user3.id)
+
 
 img_1 = Photo.create!(
   title: "Sunset in the Wild",

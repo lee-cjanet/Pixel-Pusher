@@ -11,6 +11,8 @@ import { signup, login, logout } from './actions/session_actions';
 import { fetchSinglePhoto, fetchAllPhotos, clearErrors, receiveErrors } from './actions/photo_actions';
 import { fetchUserPhotos } from './actions/profile_actions';
 import { selectAllPhotos } from './reducers/selectors';
+import { fetchGurus, fetchFollowers } from './actions/follow_actions';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   Modal.setAppElement(document.body);
@@ -41,6 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.receiveErrors = receiveErrors;
   window.selectAllPhotos = selectAllPhotos;
   window.fetchUserPhotos = fetchUserPhotos;
+  window.fetchGurus = fetchGurus;
+  window.fetchFollowers = fetchFollowers;
   //end test
 
   const root = document.getElementById('root');

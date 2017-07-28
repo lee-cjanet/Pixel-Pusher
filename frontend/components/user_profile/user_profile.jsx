@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import UserPhotos from './user_photos/user_photos_container';
 import UploadModal from '../upload/upload_modal';
+import FollowButtonContainer from '../follows/follows_container';
 
 
 class UserProfile extends React.Component {
@@ -29,6 +30,14 @@ class UserProfile extends React.Component {
   render() {
     let { id, name, bio, headshot_url, cover_url } = this.props.user;
 
+    let personalButton;
+
+    if (this.props.personalprofile) {
+      personalButton = (<UploadModal />);
+    } else {
+      personalButton = (<FollowButtonContainer userId={id} />);
+    }
+
 
     return (
       <div className="profile-container" >
@@ -49,7 +58,7 @@ class UserProfile extends React.Component {
         <div className="links-nav">
           <Link to="/index"> home </Link>
 
-          <UploadModal />
+          { personalButton }
 
           <Link to={`/user/${this.props.currentUser}`}> yours </Link>
         </div>

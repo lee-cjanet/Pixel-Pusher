@@ -28,7 +28,7 @@ const style = {
     width           : '200px',
     zIndex          : 13,
     borderRadius    : '8px',
-    "box-shadow"    : '2px 2x 4px darkslategrey'
+    boxShadow       : '2px 2x 4px darkslategrey'
   }
 };
 
@@ -49,7 +49,8 @@ class SessionModalForm extends React.Component {
   componentWillReceiveProps(nextProps) {
   if (nextProps.loggedIn) {
     this.closeModal();
-    // this.props.history.push('/');
+  } else {
+    this.render();
   }
 }
 
@@ -67,12 +68,11 @@ class SessionModalForm extends React.Component {
   }
 
   render() {
-    const { id, name, headshot_url } = this.props.currentUser;
-    console.log(this.props.loggedIn);
 
     let toggle_session;
 
     if (this.props.loggedIn) {
+      const { id, name, headshot_url } = this.props.currentUser;
       toggle_session = (
         <div className="logout-toggle">
             <Link className ="personal-profile-link" to={`/user/${id}`}>

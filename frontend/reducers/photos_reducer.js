@@ -5,7 +5,9 @@ import {
   RECEIVE_ALL_PHOTOS
 } from '../actions/photo_actions';
 
-const PhotosReducer = (state = null, action) => {
+const defaultState = {};
+
+const PhotosReducer = (state = defaultState, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_SINGLE_PHOTO:

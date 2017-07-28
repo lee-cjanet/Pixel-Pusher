@@ -1,23 +1,32 @@
-export const followGuru = guru => (
+export const followGuru = follow => (
   $.ajax({
     method: 'POST',
     url: '/api/follows',
-    data: guru
+    data: { follow }
   })
 );
 
-
-export const fetchGurus = follower => (
+// {follower: guru_id: #}
+export const fetchGurus = follow => (
   $.ajax({
     method: 'GET',
     url: '/api/follows/',
-    data: follower
+    data: { follow }
   })
 );
+
+// {follower: guru_id: #}
 
 export const fetchFollowers = guruID => (
   $.ajax({
     method: 'GET',
     url: `/api/follows/${guruID}`
+  })
+);
+
+export const unfollowGuru = guruID => (
+  $.ajax({
+    method: 'DELETE',
+    url: `/api/follows/${guruID}`,
   })
 );

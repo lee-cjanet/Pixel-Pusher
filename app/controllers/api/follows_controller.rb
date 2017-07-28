@@ -11,13 +11,15 @@ class Api::FollowsController < ApplicationController
   end
 
   def index
-    @gurus = Follow.where(guru_id: params[:id]).pluck(:follower_id)
-    render "api/follows/index" #array of gurus
+    @gurus = Follow.where(guru_id: follow_params[:guru_id]).map do |guru|
+      guru.follower
+    end
+    # render "api/follows/index" #array of gurus
   end
-# Follow.where(guru_id: 1).pluck
+
 
   def show
-    @followers =   Follow.where(follower_id: 1).map do |follow|
+    @followers = Follow.where(follower_id: params[:id]).map do |follow|
       follow.guru
     end
     #follower whose ID == guru_id. guru follows ppl in this array

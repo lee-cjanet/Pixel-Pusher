@@ -8,7 +8,7 @@ const defaultState = {
     bio: "",
     headshot_url: "http://res.cloudinary.com/smilejl/image/upload/v1501098612/profile%20pictures/IMG_2023.png"
   },
-  images: null
+  images: {}
 };
 
 const ProfileReducer = (state = defaultState, action) => {

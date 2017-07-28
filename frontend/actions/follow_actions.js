@@ -1,7 +1,7 @@
-import * as APIUtil from '../util/session_api_util';
+import * as APIUtil from '../util/follow_api_util';
 
 export const RECEIVE_GURUS = 'RECEIVE_GURUS';
-export const RECEIVE_SINGLE_GURUS = 'RECEIVE_SINGLE_GURU';
+export const RECEIVE_SINGLE_GURU = 'RECEIVE_SINGLE_GURU';
 export const RECEIVE_FOLLOWERS = 'RECEIVE_FOLLOWERS';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
@@ -41,12 +41,17 @@ export const fetchGurus = follower => dispatch => (
 );
 
 export const receiveSingleGuru = guru => ({
-  type: RECEIVE_SINGLE_GURUS,
+  type: RECEIVE_SINGLE_GURU,
   guru
 });
 
 export const followGuru = guru => dispatch => (
   APIUtil.followGuru(guru).then(guru => {
     dispatch(receiveSingleGuru(guru));
+    dispatch(clearErrors());
+  }, err => {
+    return (dispatch(receiveErrors(err.responseJSON)));
   })
 );
+
+//destory method

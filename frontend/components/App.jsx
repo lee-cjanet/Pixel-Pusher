@@ -18,7 +18,7 @@ import UserProfileContainer from './user_profile/user_profile_container';
 const App = () => (
   <div className="container">
     <Switch>
-      <Route exact path="/user/:id" component={UserProfileContainer} />
+      <ProtectedRoute exact path="/user/:id" component={UserProfileContainer} />
       <Route path="/index" component={PhotosIndexContainer} />
       <Route path="/" component={Welcome} />
     </Switch>

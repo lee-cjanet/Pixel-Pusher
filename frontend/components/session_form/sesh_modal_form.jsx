@@ -68,6 +68,7 @@ class SessionModalForm extends React.Component {
 
   render() {
     const { id, name, headshot_url } = this.props.currentUser;
+    console.log(this.props.loggedIn);
 
     let toggle_session;
 

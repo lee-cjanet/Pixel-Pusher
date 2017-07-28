@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import Masonry from 'react-masonry-component';
 
 import PhotoDetail from '../../photo_detail/photo_detail';
@@ -9,9 +10,7 @@ class UserPhotos extends React.Component {
 
   }
 
-  componentDidMount() {
-    this.props.fetchUserPhotos(this.props.userId);
-  }
+
 
   componentWillReceiveProps(nextProps) {
     this.setState({ images: nextProps.images });

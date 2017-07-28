@@ -5,7 +5,7 @@ import { fetchUserPhotos } from '../../../actions/profile_actions';
 import { selectAllUserPhotos } from '../../../reducers/selectors';
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, { match }) => {
   return {
     images: selectAllUserPhotos(state.user_profile)
   };

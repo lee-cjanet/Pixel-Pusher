@@ -7,11 +7,22 @@ import UploadModal from '../upload/upload_modal';
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
+    console.log(this.props);
   }
 
   componentDidMount() {
     this.props.fetchUserProfile(this.props.match.params.id);
     this.props.fetchUserPhotos(this.props.match.params.id);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.id !== nextProps.match.params.id) {
+      this.props.fetchUserProfile(parseInt(nextProps.match.params.id))
+      .then(()=> {
+        this.props.fetchUserPhotos(parseInt(nextProps.match.params.id));
+      });
+    }
+    this.render();
   }
 
 

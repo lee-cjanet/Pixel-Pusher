@@ -17,10 +17,12 @@ const ProfileReducer = (state = defaultState, action) => {
   switch(action.type) {
     case RECEIVE_USER_PROFILE:
       const profile = action.profile;
-      return merge({}, state, { user: profile });
+      const images = state.images;
+      return merge({}, { user: profile, images });
     case RECEIVE_USER_PHOTOS:
       const photos = action.photos;
-      return merge({}, state, { images: photos });
+      const user = state.user;
+      return merge({}, { images: photos, user });
     default:
       return state;
   }

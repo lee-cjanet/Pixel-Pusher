@@ -2,12 +2,12 @@ User.destroy_all
 Photo.destroy_all
 
 user1 = User.create!(
-  username: "smile",
-  name: "Janet",
+  username: "demo",
+  name: "Demo Guest",
   password: "123456",
-  bio: "Travel makes the year last longer",
-  headshot_url: "https://res.cloudinary.com/smilejl/image/upload/c_scale,w_300/v1501007387/profile%20pictures/janet_pixel_pusher.gif
-"
+  bio: "You got it dood",
+  headshot_url:
+  "http://res.cloudinary.com/smilejl/image/upload/v1501098612/profile%20pictures/IMG_2023.png"
   )
 
 user2 = User.create!(
@@ -21,10 +21,16 @@ user2 = User.create!(
 user3 = User.create!(
   username: "charmander",
   name: "Keith",
-  password: "123456"
+  password: "123456",
+  headshot_url: "http://res.cloudinary.com/smilejl/image/upload/v1501098612/profile%20pictures/IMG_2023.png"
 )
 
-user4 = User.create!(username: "squirtle", name: "Jared", password: "123456")
+user4 = User.create!(
+  username: "squirtle",
+  name: "Jared",
+  password: "123456",
+  headshot_url: "http://res.cloudinary.com/smilejl/image/upload/v1501098612/profile%20pictures/IMG_2023.png"
+  )
 
 user5 = User.create!(
   username: "pinsir",
@@ -32,6 +38,15 @@ user5 = User.create!(
   password: "123456",
   bio: "I enjoy long walks on the city streets",
   headshot_url: "https://res.cloudinary.com/smilejl/image/upload/c_scale,w_300/v1501033634/profile%20pictures/graham_pixel_pusher.gif"
+)
+
+user6 = User.create!(
+  username: "smile",
+  name: "Janet Lee",
+  password: "123456",
+  bio: "Travel makes the year last longer",
+  headshot_url: "https://res.cloudinary.com/smilejl/image/upload/c_scale,w_300/v1501007387/profile%20pictures/janet_pixel_pusher.gif
+"
 )
 
 user11 = User.create!(

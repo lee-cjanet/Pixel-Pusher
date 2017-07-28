@@ -1,6 +1,7 @@
 import merge from 'lodash/merge';
 
 import { RECEIVE_USER_PROFILE, RECEIVE_USER_PHOTOS } from '../actions/profile_actions';
+import { RECEIVE_SINGLE_PHOTO } from '../actions/photo_actions';
 
 const defaultState = {
   user: {
@@ -22,6 +23,9 @@ const ProfileReducer = (state = defaultState, action) => {
       const photos = action.photos;
       const user = state.user;
       return merge({}, { images: photos, user });
+    case RECEIVE_SINGLE_PHOTO:
+      const photo = action.photo;
+      return merge({}, state, { images: { photo }, user });
     default:
       return state;
   }

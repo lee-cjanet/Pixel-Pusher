@@ -34,9 +34,9 @@ class UserPhotos extends React.Component {
           disableImagesLoaded={ false }
           updateOnEachImageLoad={ false }
           >
-          {images.map(image =>
+          {images.map((image, idx) =>
             <PhotoDetail
-              key={ image.id }
+              key={ idx }
               image={ image }
             />)}
 

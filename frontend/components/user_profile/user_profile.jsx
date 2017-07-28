@@ -16,16 +16,6 @@ class UserProfile extends React.Component {
     this.props.fetchUserPhotos(this.props.match.params.id);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.match.params.id !== nextProps.match.params.id) {
-      this.props.fetchUserProfile(parseInt(nextProps.match.params.id))
-      .then(()=> {
-        this.props.fetchUserPhotos(parseInt(nextProps.match.params.id));
-      });
-    }
-    this.render();
-  }
-
 
   render() {
     let { id, name, bio, headshot_url, cover_url } = this.props.user;
@@ -45,9 +35,8 @@ class UserProfile extends React.Component {
 
 
         <div className="profile-sec-2">
-          <div className="headshot">
-            <img src={headshot_url} />
-          </div>
+
+          <img className="headshot" src={headshot_url} />
 
           <div className="info-section">
             <label className="name"> { name } </label>
@@ -58,9 +47,9 @@ class UserProfile extends React.Component {
         <div className="links-nav">
           <Link to="/index"> home </Link>
 
-          { personalButton }
+          <UploadModal />
 
-          <Link to={`/user/${this.props.currentUser}`}> yours </Link>
+
         </div>
 
         <UserPhotos userId={id}/>
@@ -74,3 +63,5 @@ export default UserProfile;
 
 
         // <img className="cover" src={ cover_url } />
+
+// <Link to={`/user/${this.props.currentUser}`}> yours </Link>

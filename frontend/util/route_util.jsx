@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Route, Redirect, withRouter } from 'react-router-dom';
+import ProfileAccessModalContainer from '../components/session_form/profile_access_modal_container';
 
 const Auth = ({ component: Component, path, loggedIn }) => (
   <Route path={path} render={(props) => (
@@ -17,7 +18,7 @@ const Protected = ({ component: Component, path, loggedIn }) => (
      loggedIn ? (
       <Component {...props} />
     ) : (
-      <Redirect to="/index" />
+      <ProfileAccessModalContainer />
     )
   )} />
 );

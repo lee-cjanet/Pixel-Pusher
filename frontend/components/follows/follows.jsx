@@ -26,6 +26,12 @@ class FollowButton extends React.Component {
       e.preventDefault();
       e.stopPropagation();
 
+      if (submitAction === this.props.followGuru) {
+        this.props.followGuru({ guru_id: this.props.userId });
+      } else {
+        this.props.unfollowGuru({ guru_id: this.props.userId });
+      }
+
       submitAction(this.props.userId);
     };
   }

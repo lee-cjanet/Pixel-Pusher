@@ -46,7 +46,7 @@ class UserProfile extends React.Component {
         <div className="links-nav">
           <Link to="/index"> home </Link>
 
-          <UploadModal />
+          { personalButton }
 
 
         </div>

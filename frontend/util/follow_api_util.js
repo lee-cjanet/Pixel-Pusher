@@ -1,17 +1,17 @@
-export const followGuru = follow => (
+export const followGuru = guru_id => (
   $.ajax({
     method: 'POST',
     url: '/api/follows',
-    data: { follow }
+    data: { follow: { guru_id } }
   })
 );
 
 // {follower: guru_id: #}
-export const fetchGurus = follow => (
+export const fetchGurus = guru_id => (
   $.ajax({
     method: 'GET',
     url: '/api/follows/',
-    data: { follow }
+    data: { follow: { guru_id } }
   })
 );
 

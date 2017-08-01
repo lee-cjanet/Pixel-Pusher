@@ -84,6 +84,23 @@
   // box-shadow: 3px 3px 5px darkgrey;
 }
 
+// =====================================skyfish
+.links-nav div{
+  color: #666;
+  text-transform: uppercase;
+}
+
+.links-nav div:after{
+  display: block;
+  content: '';
+  border-bottom: solid 3px #019fb6;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.links-nav div:hover:after {transform: scaleX(1);}
+// =====================================skyfish
+
 // .links-nav div {
 //   color: black;
 //   content: '';

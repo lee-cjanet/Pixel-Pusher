@@ -24,7 +24,7 @@ class UserProfile extends React.Component {
     if (this.props.personalprofile) {
       personalButton = (<UploadModal />);
     } else {
-      personalButton = (<FollowButtonContainer userId={id} />);
+      personalButton = (<FollowButtonContainer userId={this.props.match.params.id} />);
     }
 
 

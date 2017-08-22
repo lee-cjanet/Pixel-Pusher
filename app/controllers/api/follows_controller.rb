@@ -19,7 +19,7 @@ class Api::FollowsController < ApplicationController
 
 
   def show
-    @followers = Follow.where(follower_id: params[:id]).map do |follow|
+    @followers = Follow.where(follower_id: params[:guru_id]).map do |follow|
       follow.guru
     end
     #follower whose ID == guru_id. guru follows ppl in this array
@@ -27,7 +27,7 @@ class Api::FollowsController < ApplicationController
   end
 
   def destroy
-    @follow = Follow.find_by(guru_id: params[:id], follower_id: current_user.id)
+    @follow = Follow.find_by(guru_id: params[:guru_id], follower_id: current_user.id)
     @user = @follow.guru
     @follow.destroy!
     render "api/users/show"

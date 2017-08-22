@@ -7,7 +7,8 @@ class FollowButton extends React.Component {
     super(props);
 
     this.state = {
-      showsFollowers: true
+      showsFollowers: true,
+      userId: parseInt(this.props.userId)
     };
 
     this.handleSubmit.bind(this);
@@ -16,8 +17,8 @@ class FollowButton extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchGurus(this.props.userId);
-    this.props.fetchFollowers(this.props.userId);
+    this.props.fetchGurus({guru_id: this.state.userId});
+    this.props.fetchFollowers(this.state.userId);
   }
 
 
@@ -27,17 +28,17 @@ class FollowButton extends React.Component {
       e.stopPropagation();
 
       if (submitAction === this.props.followGuru) {
-        this.props.followGuru({ guru_id: this.props.userId });
+        this.props.followGuru({ guru_id: this.state.userId });
       } else {
-        this.props.unfollowGuru({ guru_id: this.props.userId });
+        this.props.unfollowGuru(this.state.userId);
       }
 
-      submitAction(this.props.userId);
+      submitAction(this.state.userId);
     };
   }
 
   follows() {
-    let doesFollow = this.props.followers.includes(this.props.userId);
+    let doesFollow = this.props.followers.includes(this.state.userId);
 
     return doesFollow;
   }

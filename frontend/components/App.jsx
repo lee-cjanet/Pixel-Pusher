@@ -13,12 +13,10 @@ import Welcome from './welcome/welcome';
 import PhotosIndexContainer from './index/photos_index_container';
 import UserProfileContainer from './user_profile/user_profile_container';
 
-import follow from './follows/follows_container';
 
 const App = () => (
   <div className="container">
     <Switch>
-      <Route path="/follow" component={follow} />
       <ProtectedRoute exact path="/user/:id" component={UserProfileContainer} />
       <Route path="/index" component={PhotosIndexContainer} />
       <Route path="/" component={Welcome} />

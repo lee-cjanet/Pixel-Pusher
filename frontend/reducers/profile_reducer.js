@@ -1,6 +1,13 @@
 import merge from 'lodash/merge';
 
-import { RECEIVE_USER_PROFILE, RECEIVE_USER_PHOTOS } from '../actions/profile_actions';
+import {
+  RECEIVE_USER_PROFILE,
+  RECEIVE_USER_PHOTOS
+ } from '../actions/profile_actions';
+// import {
+//   RECEIVE_USER_PROFILE,
+//   RECEIVE_USER_PHOTOS
+//  } from '../actions/profile_actions';
 import { RECEIVE_SINGLE_PHOTO } from '../actions/photo_actions';
 
 const defaultState = {

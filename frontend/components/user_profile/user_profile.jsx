@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import UserPhotos from './user_photos/user_photos_container';
 import UploadModal from '../upload/upload_modal';
-import FollowButtonContainer from '../follows/follows_container';
 
 
 class UserProfile extends React.Component {
@@ -23,9 +22,10 @@ class UserProfile extends React.Component {
 
     if (this.props.personalprofile) {
       personalButton = (<UploadModal />);
-    } else {
-      personalButton = (<FollowButtonContainer userId={this.props.match.params.id} />);
     }
+    // else {
+    //   personalButton = (<FollowButtonContainer userId={this.props.match.params.id} />);
+    // }
 
 
     return (

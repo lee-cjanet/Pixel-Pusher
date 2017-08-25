@@ -4,10 +4,13 @@ import {
   RECEIVE_USER_PROFILE,
   RECEIVE_USER_PHOTOS
  } from '../actions/profile_actions';
-// import {
-//   RECEIVE_USER_PROFILE,
-//   RECEIVE_USER_PHOTOS
-//  } from '../actions/profile_actions';
+import {
+  RECEIVE_GURUS,
+  RECEIVE_SINGLE_GURU,
+  RECEIVE_FOLLOWERS,
+  RECEIVE_SINGLE_FOLLOWER,
+  REMOVE_FOLLOW
+} from '../actions/follow_actions';
 import { RECEIVE_SINGLE_PHOTO } from '../actions/photo_actions';
 
 const defaultState = {
@@ -16,7 +19,9 @@ const defaultState = {
     bio: "",
     headshot_url: "http://res.cloudinary.com/smilejl/image/upload/v1501098612/profile%20pictures/IMG_2023.png"
   },
-  images: {}
+  images: {},
+  followers: {},
+  gurus: {}
 };
 
 const ProfileReducer = (state = defaultState, action) => {
@@ -33,6 +38,7 @@ const ProfileReducer = (state = defaultState, action) => {
     case RECEIVE_SINGLE_PHOTO:
       const photo = action.photo;
       return merge({}, state, { images: { photo }, user });
+    // case RECEIVE_FOLLOWERS
     default:
       return state;
   }

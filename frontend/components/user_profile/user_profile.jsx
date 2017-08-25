@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import UserPhotos from './user_photos/user_photos_container';
+import FollowButtonContainer from '../follow/follow_button_container';
 import UploadModal from '../upload/upload_modal';
 
 
@@ -23,16 +24,13 @@ class UserProfile extends React.Component {
     if (this.props.personalprofile) {
       personalButton = (<UploadModal />);
     }
-    // else {
-    //   personalButton = (<FollowButtonContainer userId={this.props.match.params.id} />);
-    // }
+    else {
+      personalButton = (<FollowButtonContainer userId={id} />);
+    }
 
 
     return (
       <div className="profile-container" >
-
-
-
         <div className="profile-sec-2">
 
           <img className="headshot" src={headshot_url} />
@@ -47,7 +45,6 @@ class UserProfile extends React.Component {
           <Link to="/index"> home </Link>
 
           { personalButton }
-
 
         </div>
 

@@ -2,7 +2,11 @@ import * as APIUtil from '../util/profile_api_util';
 
 export const RECEIVE_USER_PROFILE = 'RECEIVE_USER_PROFILE';
 export const RECEIVE_USER_PHOTOS = 'RECEIVE_USER_PHOTOS';
+export const RESET_PROFILE = 'RESET_PROFILE';
 
+export const resetProfile = () => ({
+  type: RESET_PROFILE
+});
 
 export const receiveUserProfile = profile => ({
   type: RECEIVE_USER_PROFILE,
@@ -25,5 +29,3 @@ export const fetchUserPhotos = id => dispatch => (
     dispatch(receiveUserPhotos(photos))
   ))
 );
-
-// update profile

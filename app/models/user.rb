@@ -24,6 +24,9 @@ class User < ApplicationRecord
     through: :followings_as_follower,
     source: :guru
 
+  def follows?(user)
+    self.gurus.include?(user)
+  end
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

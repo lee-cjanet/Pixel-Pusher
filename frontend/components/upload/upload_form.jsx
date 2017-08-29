@@ -31,11 +31,7 @@ class UploadForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const photo = Object.assign({}, this.state);
-    console.log(photo);
-    console.log("//////////////");
-    console.log({photo});
     this.props.createSinglePhoto({ photo });
-    // this.props.ownProps.closeModal();
   }
 
   handleImageUpload(image) {

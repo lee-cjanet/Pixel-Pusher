@@ -7,7 +7,7 @@ import { selectAllUserPhotos } from '../../reducers/selectors';
 
 const mapStateToProps = state => {
   return {
-    personalprofile: Boolean(state.session.currentUser.id === location.pathname.slice(1)),
+    personalprofile: Boolean(state.session.currentUser.id === state.user_profile.user.id),
     follows: state.user_profile.user.follows,
     user: state.user_profile.user,
     currentUser: state.session.currentUser.id

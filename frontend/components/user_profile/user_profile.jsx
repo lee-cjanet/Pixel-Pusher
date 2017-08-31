@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import UserPhotos from './user_photos/user_photos_container';
 import FollowButtonContainer from '../follow/follow_button_container';
+import FollowProfile from '../follow/follow_profile';
 import UploadModal from '../upload/upload_modal';
 
 
@@ -13,6 +14,10 @@ class UserProfile extends React.Component {
   componentDidMount() {
     this.props.fetchUserProfile(this.props.match.params.id);
     this.props.fetchUserPhotos(this.props.match.params.id);
+  }
+
+  componentWillUnmount() {
+    this.props.resetProfile();
   }
 
 
@@ -49,6 +54,11 @@ class UserProfile extends React.Component {
         </div>
 
         <UserPhotos userId={id}/>
+        <FollowProfile
+          gurus={this.props.gurus}
+          followers={this.props.followers}
+          />
+
 
       </div>
     );

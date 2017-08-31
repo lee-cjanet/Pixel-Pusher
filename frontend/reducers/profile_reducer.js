@@ -11,11 +11,11 @@ const defaultState = {
   user: {
     name: "",
     bio: "",
-    headshot_url: "http://res.cloudinary.com/smilejl/image/upload/v1501098612/profile%20pictures/IMG_2023.png"
+    headshot_url: "http://res.cloudinary.com/smilejl/image/upload/v1501098612/profile%20pictures/IMG_2023.png",
+    followers: {},
+    gurus: {}
   },
   images: {},
-  followers: {},
-  gurus: {}
 };
 
 const ProfileReducer = (state = defaultState, action) => {
@@ -24,7 +24,7 @@ const ProfileReducer = (state = defaultState, action) => {
     case RECEIVE_USER_PROFILE:
       const profile = action.profile;
       const images = state.images;
-      return merge({}, { user: profile, images });
+      return merge(state, { user: profile, images });
     case RECEIVE_USER_PHOTOS:
       const photos = action.photos;
       const user = state.user;

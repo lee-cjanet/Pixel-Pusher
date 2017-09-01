@@ -70,7 +70,9 @@ class UserProfile extends React.Component {
 
 
     return (
-      <div className="profile-container" >
+      <div>
+      <figure className="profile-background-image"/>
+      <div className="profile-container">
         <section className="top-nav">
           <Link to="/index">
             <img
@@ -123,6 +125,7 @@ class UserProfile extends React.Component {
 
         { this.viewSection() }
       </div>
+    </div>
     );
   }
 }

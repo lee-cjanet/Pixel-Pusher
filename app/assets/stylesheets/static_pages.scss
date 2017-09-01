@@ -46,10 +46,30 @@ body {
   transition: .7s;
 }
 
-// .opacity-bar {
-//   height: 50px;
-//   top: 90%;
-//   opacity: .3;
+// .welcome-container2 {
+//   position: relative;
+//   background-image:
+//    url(https://res.cloudinary.com/smilejl/image/upload/c_scale,w_1500/v1500932889/Splash%20page/3_warren-wong.jpg);
+//   height: 100vh;
+//   width: 100vw;
+//   background-position: center;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   transition: .7s;
+//   opacity: .8;
+// }
+//
+// .welcome-container {
+//   position: relative;
+//   background-image: url(https://res.cloudinary.com/smilejl/image/upload/c_scale,w_1500/v1500939234/Splash%20page/1_aperture-vintage-212345.jpg);
+//   height: 100vh;
+//   width: 100vw;
+//   background-position: center;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   transition: .7s;
 // }
 
 .welcome-overlay {
@@ -75,9 +95,9 @@ body {
 }
 
 .welcome-pixelpusher {
-  font-family: 'Amatica SC', cursive;
+  font-family: 'Raleway', cursive;
   font-size: 60px;
-  font-weight: 600;
+  font-weight: 400;
   color: #FAE437;
   text-shadow: 2px 2px 3px #474747;
 }

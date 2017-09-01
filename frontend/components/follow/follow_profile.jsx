@@ -8,18 +8,20 @@ class FollowProfile extends React.Component {
 
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({ followers: nextProps.followers });
-    this.setState({ gurus: nextProps.gurus });
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   this.setState({ followers: nextProps.followers });
+  //   this.setState({ gurus: nextProps.gurus });
+  // }
 
   render () {
     return (
-      <ul className="follow-profile-container">
-        {this.props.followers.map((user, idx) =>
-          <FollowProfileItem key={ idx } user={ user }/>
-          )}
-      </ul>
+      <div className="user-sec-3-container">
+        {this.props.users.map((user, idx) =>
+          <FollowProfileItem
+            key={ idx }
+            user={ user }
+          />)}
+      </div>
     );
   }
 }

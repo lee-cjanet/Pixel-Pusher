@@ -9,6 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #fafafa
 }
 
 .profile-sec-2 {
@@ -71,7 +72,7 @@
 .links-nav {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: baseline;
   width: 100vw;
   font-size: 22px;
   font-weight: 900;
@@ -87,13 +88,13 @@
 // =====================================skyfish
 .links-nav div{
   color: #666;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 .links-nav div:after{
   display: block;
   content: '';
-  border-bottom: solid 3px #019fb6;
+  border-top: solid 3px black;
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
 }
@@ -114,25 +115,34 @@
 // ======================================
 // USER PHOTOS
 
-.user-photos-container {
+.user-sec-3-container {
   display: flex;
-  height: 700px;
-  width: 100vw;
+  width: 90vw;
   overflow: scroll;
   justify-content: center;
-  padding-top: 20px;
+  padding-top: 35px;
   border-style: solid;
-  border-top: thick double #424242;
-  background-color: #F0F0F0;
+  background-color: white;
+  border-color: #fafafa;
 }
 
 
-.user-photos-container .photo-modal-container .item-button .item .image {
+.user-sec-3-container .photo-modal-container .item-button .item .image {
   display: flex;
   justify-content: center;
   width: 350px;
   height: auto;
   padding: 2px;
+}
+
+.currentNav {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+}
+
+.nav-button {
+
 }
 
 // .item-button:nth-child(3n+0) {

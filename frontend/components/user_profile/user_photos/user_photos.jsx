@@ -27,7 +27,7 @@ class UserPhotos extends React.Component {
 
 
     return (
-      <div className={"user-photos-container"}>
+      <div className={"user-sec-3-container"}>
         <Masonry
           elementType={'ul'}
           options={masonryOptions}

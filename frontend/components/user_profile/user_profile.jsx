@@ -5,10 +5,19 @@ import FollowButtonContainer from '../follow/follow_button_container';
 import FollowProfile from '../follow/follow_profile';
 import UploadModal from '../upload/upload_modal';
 
+const TRIANGLE = "http://res.cloudinary.com/smilejl/image/upload/v1504249965/pixelpusher%20screenshots/triangleNav.png";
+
 
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      type: "photos",
+    };
+
+    this.renderType = this.renderType.bind(this);
+    this.viewSection = this.viewSection.bind(this);
   }
 
   componentDidMount() {
@@ -20,8 +29,62 @@ class UserProfile extends React.Component {
     this.props.resetProfile();
   }
 
+  updateState() {
+
+  }
+
+  renderType(type) {
+    event.preventDefault();
+    return event => this.setState({ type: type});
+
+  }
+
+  viewSection() {
+    let { id } = this.props.user;
+
+    if (this.state.type === "followers") {
+      return (
+        <FollowProfile
+          users={this.props.followers}
+          />
+      );
+    } else if (this.state.type === "following") {
+      return (
+        <FollowProfile
+          users={this.props.gurus}
+          />
+      );
+    } else {
+      return (
+        <UserPhotos userId={id}/>
+      );
+    }
+  }
+
+  viewSection(type) {
+    let { id } = this.props.user;
+
+    if (this.state.type === "followers") {
+      return (
+        <FollowProfile
+          users={this.props.followers}
+          />
+      );
+    } else if (this.state.type === "following") {
+      return (
+        <FollowProfile
+          users={this.props.gurus}
+          />
+      );
+    } else {
+      return (
+        <UserPhotos userId={id}/>
+      );
+    }
+  }
 
   render() {
+    console.log(this.state);
     let { id, name, bio, headshot_url, cover_url } = this.props.user;
 
     let personalButton;
@@ -43,23 +106,30 @@ class UserProfile extends React.Component {
           <div className="info-section">
             <label className="name"> { name } </label>
             <p className="bio"> " { bio } " </p>
+            { personalButton }
           </div>
         </div>
 
         <div className="links-nav">
           <Link to="/index"> home </Link>
-
-          { personalButton }
-
+          <button className={this.state.type === "photos" ? "currentNav" : "nav-buttons"}
+            onClick={this.renderType("photos")}>
+             photos
+             {this.state.type === "photos" ?
+               <img className="image" src={TRIANGLE} /> : <div></div>
+             }
+          </button>
+          <button className={this.state.type === "followers" ? "currentNav" : "nav-buttons"}
+            onClick={this.renderType("followers")}>
+             followers
+          </button>
+          <button className={this.state.type === "following" ? "currentNav" : "nav-buttons"}
+            onClick={this.renderType("following")}>
+             following
+          </button>
         </div>
 
-        <UserPhotos userId={id}/>
-        <FollowProfile
-          gurus={this.props.gurus}
-          followers={this.props.followers}
-          />
-
-
+        { this.viewSection() }
       </div>
     );
   }

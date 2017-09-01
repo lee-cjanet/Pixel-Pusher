@@ -34,7 +34,7 @@ class FollowButton extends React.Component {
 
     return (
       <div>
-        <button className="follow_button"
+        <button className="upload-follow-button"
           onClick={this.handleSubmit}>
            { toggleFollow }
         </button>

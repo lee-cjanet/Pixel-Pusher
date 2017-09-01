@@ -1,3 +1,9 @@
+.upload-modal-container {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1
+}
+
 
 .upload-form-container {
   border: 2px solid pink;
@@ -61,8 +67,10 @@ h2 p {
   }
 }
 
-.upload-text {
-  font-size: 20px;
+.upload-follow-button {
+  display: flex;
+  font-size: 25px;
+  // align-self: center;
 }
 
 

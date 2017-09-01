@@ -9,15 +9,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fafafa
+  background-color: #f0f0f0;
+  padding: 5%
 }
 
 .profile-sec-2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 133px;
-  padding-bottom: 110px;
+  padding-top: 9%;
+  padding-bottom: 15%;
   width: 90vw;
 }
 
@@ -31,18 +32,27 @@
 }
 
 .info-section {
-  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bio-section {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 8
 }
 
 .name {
+  display: flex;
   font-family: 'Satisfy', cursive;
   font-size: 53px;
 }
 
-.bio {
+.description {
   font-size: 19px;
   color: #1F1F1F;
   padding-top: 10px;
+  // padding-bottom: 5%
 }
 
 
@@ -77,38 +87,27 @@
   font-size: 22px;
   font-weight: 900;
   padding-left: 12px;
-  border-top: 2px solid black;
   font-color: black;
-  margin: 25px;
-  border-top: 2px black;
 
   // box-shadow: 3px 3px 5px darkgrey;
 }
 
 // =====================================skyfish
-.links-nav div{
-  color: #666;
-  // text-transform: uppercase;
-}
-
-.links-nav div:after{
-  display: block;
-  content: '';
-  border-top: solid 3px black;
-  transform: scaleX(0);
-  transition: transform 250ms ease-in-out;
-}
-
-.links-nav div:hover:after {transform: scaleX(1);}
-// =====================================skyfish
-
-// .links-nav div {
-//   color: black;
+// .links-nav div{
+//   color: #666;
+//   // text-transform: uppercase;
+// }
+//
+// .links-nav div:after{
+//   display: block;
 //   content: '';
 //   border-top: solid 3px black;
 //   transform: scaleX(0);
 //   transition: transform 250ms ease-in-out;
 // }
+//
+// .links-nav div:hover:after {transform: scaleX(1);}
+// =====================================skyfish
 
 
 
@@ -117,13 +116,14 @@
 
 .user-sec-3-container {
   display: flex;
-  width: 90vw;
+  width: 80vw;
   overflow: scroll;
   justify-content: center;
-  padding-top: 35px;
+  padding: 5%;
   border-style: solid;
   background-color: white;
-  border-color: #fafafa;
+  border-color: #EDEDED;
+  border-radius: 3px
 }
 
 
@@ -139,10 +139,16 @@
   display: flex;
   align-self: center;
   flex-direction: column;
+  color: #2BC9C9
 }
 
-.nav-button {
+.triangle {
+  padding-top: 13px;
+  width: 80%
+}
 
+.nav-buttons {
+  color: #1F9191
 }
 
 // .item-button:nth-child(3n+0) {

@@ -13,7 +13,6 @@ class UploadForm extends React.Component {
     this.state = {
       title: '',
       image_url: ''
-      // location: 1
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
@@ -85,7 +84,7 @@ class UploadForm extends React.Component {
           <span className='top-message'>
             <h1>Capture + Share</h1>
             <h2>aka
-              <span className="upload-text">  &nbsp; upload &nbsp;</span>
+              <span className="upload-follow-button">  &nbsp; upload &nbsp;</span>
               here
             </h2>
            </span>

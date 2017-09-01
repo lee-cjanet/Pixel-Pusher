@@ -31,8 +31,7 @@ class UserProfile extends React.Component {
 
   renderType(type) {
     event.preventDefault();
-    return event => this.setState({ type: type});
-
+    return event => this.setState({ type: type });
   }
 
   viewSection() {
@@ -76,11 +75,13 @@ class UserProfile extends React.Component {
 
           <img className="headshot" src={headshot_url} />
 
-          <div className="info-section">
-            <label className="name"> { name } </label>
-            <p className="bio"> " { bio } " </p>
+          <section className="info-section">
+            <div className="bio-section">
+              <label className="name"> { name } </label>
+              <p className="description"> " { bio } " </p>
+            </div>
             { personalButton }
-          </div>
+          </section>
         </div>
 
         <div className="links-nav">
@@ -89,16 +90,22 @@ class UserProfile extends React.Component {
             onClick={this.renderType("photos")}>
              photos
              {this.state.type === "photos" ?
-               <img className="image" src={TRIANGLE} /> : <div></div>
+               <img className="triangle" src={TRIANGLE} /> : <div></div>
              }
           </button>
           <button className={this.state.type === "followers" ? "currentNav" : "nav-buttons"}
             onClick={this.renderType("followers")}>
              followers
+             {this.state.type === "followers" ?
+               <img className="triangle" src={TRIANGLE} /> : <div></div>
+             }
           </button>
           <button className={this.state.type === "following" ? "currentNav" : "nav-buttons"}
             onClick={this.renderType("following")}>
              following
+             {this.state.type === "following" ?
+               <img className="triangle" src={TRIANGLE} /> : <div></div>
+             }
           </button>
         </div>
 

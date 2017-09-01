@@ -71,42 +71,54 @@ class UserProfile extends React.Component {
 
     return (
       <div className="profile-container" >
+        <section className="top-nav">
+          <Link to="/index">
+            <img
+              className="home-button"
+              src="http://res.cloudinary.com/smilejl/image/upload/c_scale,w_50/v1504288534/pixelpusher screenshots/green-back-button-icon-65921.png"/>
+          </Link>
+        </section>
         <div className="profile-sec-2">
 
           <img className="headshot" src={headshot_url} />
 
           <section className="info-section">
-            <div className="bio-section">
-              <label className="name"> { name } </label>
-              <p className="description"> " { bio } " </p>
+            <div className="info-section-divider">
+              <div className="bio-section">
+                <label className="name"> { name } </label>
+                <p className="description"> " { bio } " </p>
+              </div>
+              <div className="upload-follow-div">
+                { personalButton }
+              </div>
             </div>
-            { personalButton }
           </section>
         </div>
 
         <div className="links-nav">
-          <Link to="/index"> home </Link>
-          <button className={this.state.type === "photos" ? "currentNav" : "nav-buttons"}
-            onClick={this.renderType("photos")}>
-             photos
-             {this.state.type === "photos" ?
-               <img className="triangle" src={TRIANGLE} /> : <div></div>
-             }
-          </button>
-          <button className={this.state.type === "followers" ? "currentNav" : "nav-buttons"}
-            onClick={this.renderType("followers")}>
-             followers
-             {this.state.type === "followers" ?
-               <img className="triangle" src={TRIANGLE} /> : <div></div>
-             }
-          </button>
-          <button className={this.state.type === "following" ? "currentNav" : "nav-buttons"}
-            onClick={this.renderType("following")}>
-             following
-             {this.state.type === "following" ?
-               <img className="triangle" src={TRIANGLE} /> : <div></div>
-             }
-          </button>
+            <button className={this.state.type === "photos" ? "currentNav" : "nav-buttons"}
+              onClick={this.renderType("photos")}>
+               photos
+               {this.state.type === "photos" ?
+                 <img className="triangle" src={TRIANGLE} /> : <div></div>
+               }
+            </button>
+
+            <button className={this.state.type === "followers" ? "currentNav" : "nav-buttons"}
+              onClick={this.renderType("followers")}>
+               followers
+               {this.state.type === "followers" ?
+                 <img className="triangle" src={TRIANGLE} /> : <div></div>
+               }
+            </button>
+
+            <button className={this.state.type === "following" ? "currentNav" : "nav-buttons"}
+              onClick={this.renderType("following")}>
+               following
+               {this.state.type === "following" ?
+                 <img className="triangle" src={TRIANGLE} /> : <div></div>
+               }
+            </button>
         </div>
 
         { this.viewSection() }

@@ -29,10 +29,6 @@ class UserProfile extends React.Component {
     this.props.resetProfile();
   }
 
-  updateState() {
-
-  }
-
   renderType(type) {
     event.preventDefault();
     return event => this.setState({ type: type});
@@ -61,30 +57,7 @@ class UserProfile extends React.Component {
     }
   }
 
-  viewSection(type) {
-    let { id } = this.props.user;
-
-    if (this.state.type === "followers") {
-      return (
-        <FollowProfile
-          users={this.props.followers}
-          />
-      );
-    } else if (this.state.type === "following") {
-      return (
-        <FollowProfile
-          users={this.props.gurus}
-          />
-      );
-    } else {
-      return (
-        <UserPhotos userId={id}/>
-      );
-    }
-  }
-
   render() {
-    console.log(this.state);
     let { id, name, bio, headshot_url, cover_url } = this.props.user;
 
     let personalButton;

@@ -11,8 +11,8 @@ const mapStateToProps = state => {
     follows: state.user_profile.user.follows,
     user: state.user_profile.user,
     currentUser: state.session.currentUser.id,
-    followers: selectAllFollowers(state.user_profile.user),
-    gurus: selectAllGurus(state.user_profile.user)
+    followers: selectAllFollowers(state.user_profile.user) || {},
+    gurus: selectAllGurus(state.user_profile.user) || {}
   };
 };
 

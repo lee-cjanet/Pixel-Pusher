@@ -8,7 +8,7 @@ class FollowProfileItem extends React.Component {
     let { id, name, headshot_url } = this.props.user;
 
     return (
-        <Link to={`/user/${id}`}>
+        <Link to={`/user/${id}`} replace>
           <li className="follow-item">
             <img className="profile-image"
               src={headshot_url} />

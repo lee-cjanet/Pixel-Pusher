@@ -14,6 +14,7 @@ class UserProfile extends React.Component {
 
     this.state = {
       type: "photos",
+      pathLocation: this.props.location.pathname.split('/').slice(-1)[0]
     };
 
     this.renderType = this.renderType.bind(this);
@@ -25,12 +26,26 @@ class UserProfile extends React.Component {
     this.props.fetchUserPhotos(this.props.match.params.id);
   }
 
+  componentWillReceiveProps(nextProps) {
+    const oldLocation = this.props.location.pathname.split('/').slice(-1)[0];
+    const newLocation = nextProps.location.pathname.split('/').slice(-1)[0];
+
+    if (oldLocation !== newLocation) {
+      this.props.fetchUserProfile(newLocation);
+      this.props.fetchUserPhotos(newLocation);
+      this.setState({
+        type: "photos"
+      });
+    }
+  }
+
   componentWillUnmount() {
     this.props.resetProfile();
   }
 
   renderType(type) {
     event.preventDefault();
+
     return event => this.setState({ type: type });
   }
 

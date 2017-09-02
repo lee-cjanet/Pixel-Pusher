@@ -11,7 +11,7 @@ class UploadForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: '',
+      title: ' ',
       image_url: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);

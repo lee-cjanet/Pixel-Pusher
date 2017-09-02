@@ -45,7 +45,7 @@ user6 = User.create!(
   name: "Janet Lee",
   password: "123456",
   bio: "Travel makes the year last longer",
-  headshot_url: "https://res.cloudinary.com/smilejl/image/upload/c_scale,w_300/v1501007387/profile%20pictures/janet_pixel_pusher.gif
+  headshot_url: "http://res.cloudinary.com/smilejl/image/upload/v1504390608/pixelpusher%20screenshots/janet2.png
 "
 )
 

@@ -5,7 +5,7 @@ import FollowButtonContainer from '../follow/follow_button_container';
 import FollowProfile from '../follow/follow_profile';
 import UploadModal from '../upload/upload_modal';
 
-const TRIANGLE = "http://res.cloudinary.com/smilejl/image/upload/v1504249965/pixelpusher%20screenshots/triangleNav.png";
+const TRIANGLE = "http://res.cloudinary.com/smilejl/image/upload/v1504321504/pixelpusher%20screenshots/triangleNavGrey.png";
 
 
 class UserProfile extends React.Component {

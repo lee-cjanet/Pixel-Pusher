@@ -22,14 +22,14 @@ user3 = User.create!(
   username: "charmander",
   name: "Keith",
   password: "123456",
-  headshot_url: "http://res.cloudinary.com/smilejl/image/upload/v1501098612/profile%20pictures/IMG_2023.png"
+  headshot_url: "http://res.cloudinary.com/smilejl/image/upload/v1504390106/pixelpusher%20screenshots/stephan.png"
 )
 
 user5 = User.create!(
   username: "squirtle",
   name: "Jared",
   password: "123456",
-  headshot_url: "http://res.cloudinary.com/smilejl/image/upload/v1501098612/profile%20pictures/IMG_2023.png"
+  headshot_url: "http://res.cloudinary.com/smilejl/image/upload/v1504390099/pixelpusher%20screenshots/jared.png"
   )
 
 user4 = User.create!(
@@ -70,15 +70,69 @@ user12 = User.create!(
 
 # =======================================================
 
+# user1 = demo
+# user2 = Greg
+# user3 = keith
+# user4 = graham
+# user5 = jared
+# user6 = me
+# user11 = jules
+# user12 = Anastassia
+
 location1 = Location.create!(location: "none selected")
 
-Follow.create!(guru_id: user1.id, follower_id: user2.id)
-
-Follow.create!(guru_id: user2.id, follower_id: user3.id)
-
+Follow.create!(guru_id: user2.id, follower_id: user1.id)
 Follow.create!(guru_id: user3.id, follower_id: user1.id)
+Follow.create!(guru_id: user4.id, follower_id: user1.id)
+Follow.create!(guru_id: user6.id, follower_id: user1.id)
+Follow.create!(guru_id: user12.id, follower_id: user1.id)
+
+Follow.create!(guru_id: user1.id, follower_id: user2.id)
+Follow.create!(guru_id: user6.id, follower_id: user2.id)
+Follow.create!(guru_id: user12.id, follower_id: user2.id)
+Follow.create!(guru_id: user11.id, follower_id: user2.id)
 
 Follow.create!(guru_id: user1.id, follower_id: user3.id)
+Follow.create!(guru_id: user2.id, follower_id: user3.id)
+Follow.create!(guru_id: user4.id, follower_id: user3.id)
+Follow.create!(guru_id: user5.id, follower_id: user3.id)
+Follow.create!(guru_id: user6.id, follower_id: user3.id)
+Follow.create!(guru_id: user11.id, follower_id: user3.id)
+
+Follow.create!(guru_id: user1.id, follower_id: user4.id)
+Follow.create!(guru_id: user2.id, follower_id: user4.id)
+Follow.create!(guru_id: user3.id, follower_id: user4.id)
+Follow.create!(guru_id: user5.id, follower_id: user4.id)
+Follow.create!(guru_id: user6.id, follower_id: user4.id)
+Follow.create!(guru_id: user11.id, follower_id: user4.id)
+Follow.create!(guru_id: user12.id, follower_id: user4.id)
+
+Follow.create!(guru_id: user11.id, follower_id: user5.id)
+Follow.create!(guru_id: user3.id, follower_id: user5.id)
+Follow.create!(guru_id: user4.id, follower_id: user5.id)
+Follow.create!(guru_id: user6.id, follower_id: user5.id)
+Follow.create!(guru_id: user12.id, follower_id: user5.id)
+
+Follow.create!(guru_id: user1.id, follower_id: user6.id)
+Follow.create!(guru_id: user5.id, follower_id: user6.id)
+Follow.create!(guru_id: user12.id, follower_id: user6.id)
+Follow.create!(guru_id: user2.id, follower_id: user6.id)
+Follow.create!(guru_id: user4.id, follower_id: user6.id)
+Follow.create!(guru_id: user3.id, follower_id: user6.id)
+
+Follow.create!(guru_id: user6.id, follower_id: user11.id)
+Follow.create!(guru_id: user12.id, follower_id: user11.id)
+Follow.create!(guru_id: user3.id, follower_id: user11.id)
+
+Follow.create!(guru_id: user1.id, follower_id: user12.id)
+Follow.create!(guru_id: user6.id, follower_id: user12.id)
+Follow.create!(guru_id: user5.id, follower_id: user12.id)
+Follow.create!(guru_id: user2.id, follower_id: user12.id)
+Follow.create!(guru_id: user4.id, follower_id: user12.id)
+
+
+
+
 
 
 img_1 = Photo.create!(

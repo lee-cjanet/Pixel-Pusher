@@ -11,6 +11,10 @@ class PhotosIndex extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      type: "feed"
+    };
+
   }
 
   componentDidMount() {

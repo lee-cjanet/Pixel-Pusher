@@ -59,7 +59,7 @@
   width: 274px;
   height: 274px;
   border-radius: 50%;
-  border: 3px solid black;
+  border: 3px solid #383838;
   // margin: 3px solid black;
   // transform: translate(-);
 }
@@ -86,6 +86,7 @@
   display: flex;
   font-family: 'Satisfy', cursive;
   font-size: 53px;
+  color: #383838
 }
 
 .description {
@@ -208,6 +209,7 @@
 
 .user-sec-3-container {
   display: flex;
+  flex-wrap: wrap;
   width: 80vw;
   justify-content: center;
   padding: 5%;

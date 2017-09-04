@@ -29,21 +29,23 @@ class welcome extends React.Component {
         <div className="welcome-overlay">
           <div className= "welcome-text-container" >
             <Link to="/index">
-              <label className="welcome-pixelpusher"
-                onMouseEnter={this.onMouseEnterHandler}
-                onMouseLeave={this.onMouseLeaveHandler}>
-                p i x e l
-              <span className= "welcome-diamond"> ♦ </span>
-                p u s h e r
-              </label>
-            </Link>
-              <br/>
-            <Link to="/index">
-              <label className="welcome-photographers"
-                onMouseEnter={this.onMouseEnterHandler}
-                onMouseLeave={this.onMouseLeaveHandler}>
-                from photographers, to photographers
-              </label>
+              <div className="welcome-text-container">
+                <section className="pixelpusher-text">
+                  <label className="welcome-pixelpusher"
+                    onMouseEnter={this.onMouseEnterHandler}
+                    onMouseLeave={this.onMouseLeaveHandler}>
+                    p i x e l
+                  <span className= "welcome-diamond"> ♦ </span>
+                    p u s h e r
+                  </label>
+                </section>
+                <br/>
+                <label className="welcome-photographers"
+                  onMouseEnter={this.onMouseEnterHandler}
+                  onMouseLeave={this.onMouseLeaveHandler}>
+                  from photographers, to photographers
+                </label>
+              </div>
             </Link>
           </div>
         </div>

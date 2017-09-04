@@ -46,6 +46,11 @@ body {
   transition: .7s;
 }
 
+.welcome-text-container {
+  display: flex;
+  flex-direction: column;
+}
+
 // .welcome-container2 {
 //   position: relative;
 //   background-image:
@@ -97,6 +102,7 @@ body {
 .welcome-pixelpusher {
   font-family: 'Raleway', cursive;
   font-size: 60px;
+  letter-spacing: 8px;
   font-weight: 400;
   color: #FAE437;
   text-shadow: 2px 2px 3px #474747;
@@ -114,6 +120,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   letter-spacing: 6px;
+  padding-top: 7px;
   color: #f4f4f4;
   text-shadow: 0px 0px 1px #474747;
 }

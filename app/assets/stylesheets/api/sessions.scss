@@ -58,7 +58,6 @@
 
 .modal-signin-button {
   position: absolute;
-  left: 10%;
   bottom: 7%;
   color: #404040;
   font-size: 20px;
@@ -68,19 +67,17 @@
 .modal-signin-button:hover {
   cursor: pointer;
   color: rgba(43,201,201, 1)
-  // font-size: 23;
 }
 
 
 .modal-signout-button {
   display: flex;
   justify-content: center;
-  border-top: 1px solid #424242;
+  margin-top: 7px;
   padding: 4px;
 }
 
 .modal-signout-button:hover {
   color: rgba(43,201,201, 1);
-  // color: white;
   cursor: pointer;
 }

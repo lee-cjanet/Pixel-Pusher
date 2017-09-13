@@ -46,6 +46,7 @@
 h2 {
   display: flex;
   justify-content: flex-end;
+  align-items: baseline;
   font-size: 18px;
   width:100%;
   overflow:hidden;
@@ -113,17 +114,17 @@ dropzone-text-container:hover {
 }
 
 .modal-upload-button {
-  border: 1px solid #424242;
+  // border: 1px solid #424242;
   border-radius: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 3px;
-  margin: 11px;
+  padding: 4px 8px 9px;
+  background-color: #c0c0c0;
+  color: #fff;
 }
 
 .modal-upload-button:hover {
   cursor:pointer;
-  box-shadow: 2px 2px 4px #424242;
+  background-color: rgba(43,201,201,0.7);
+  // padding-bottom: 7px;
 }
 
 .text-input-container {

@@ -12,6 +12,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Welcome from './welcome/welcome';
 import PhotosIndexContainer from './index/photos_index_container';
 import UserProfileContainer from './user_profile/user_profile_container';
+import Footer from './footer/footer';
 
 
 const App = () => (
@@ -21,6 +22,7 @@ const App = () => (
       <Route path="/index" component={PhotosIndexContainer} />
       <Route path="/" component={Welcome} />
     </Switch>
+    <Footer />
   </div>
 );
 

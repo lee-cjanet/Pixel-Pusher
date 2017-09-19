@@ -1,29 +1,47 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  // background-color: grey;
+  width:100%;
+  height: 35px;
+  bottom: 0px;
+  padding-top: 3px;
+  padding-bottom: 1%;
+  z-index: -1;
+
+  a {
+    height: 25px;
+    width: 25px;
+    z-index: 1;
+    margin: 6px;
+    background-size: contain;
+  }
+}
+
 .personalwebsite {
-   background-image: url(http://res.cloudinary.com/smilejl/image/upload/v1505789823/socialmedia/websitebefore.png);
-   height: 70px;
-   width: 70px;
+   background-image: url(http://res.cloudinary.com/smilejl/image/upload/v1505797221/socialmedia/websitebefore.png);
 }
 
 .personalwebsite:hover {
-   background-image: url(http://res.cloudinary.com/smilejl/image/upload/v1505789823/socialmedia/websiteafter.png);
+   background-image: url(http://res.cloudinary.com/smilejl/image/upload/v1505797549/socialmedia/websiteafter.png);
 }
 
 .github {
    background-image: url(http://res.cloudinary.com/smilejl/image/upload/v1505789822/socialmedia/githubbefore.png);
-   height: 70px;
-   width: 70px;
 }
 
 .github:hover {
-   background-image: url(http://res.cloudinary.com/smilejl/image/upload/v1505789822/socialmedia/githubafter.png);
+   background-image: url(http://res.cloudinary.com/smilejl/image/upload/v1505796553/socialmedia/githubafter.png);
+   opacity: .7;
 }
 
 .linkedin {
    background-image: url(http://res.cloudinary.com/smilejl/image/upload/v1505789822/socialmedia/linkedinbefore.png);
-   height: 70px;
-   width: 70px;
+   margin-right: 5%;
 }
 
 .linkedin:hover {
-   background-image: url(http://res.cloudinary.com/smilejl/image/upload/v1505789823/socialmedia/linkedinafter.png);
+   background-image: url(http://res.cloudinary.com/smilejl/image/upload/v1505796553/socialmedia/linkedinafter.png);
+   opacity: .7;
 }

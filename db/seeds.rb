@@ -7,7 +7,7 @@ user1 = User.create!(
   password: "123456",
   bio: "You got it dood",
   headshot_url:
-  "http://res.cloudinary.com/smilejl/image/upload/v1501098612/profile%20pictures/IMG_2023.png"
+  "https://res.cloudinary.com/smilejl/image/upload/v1501098612/profile%20pictures/IMG_2023.png"
   )
 
 user2 = User.create!(
@@ -22,14 +22,14 @@ user3 = User.create!(
   username: "charmander",
   name: "Keith",
   password: "123456",
-  headshot_url: "http://res.cloudinary.com/smilejl/image/upload/v1504390106/pixelpusher%20screenshots/stephan.png"
+  headshot_url: "https://res.cloudinary.com/smilejl/image/upload/v1505958281/profile%20pictures/Keith_Wong.png"
 )
 
 user5 = User.create!(
   username: "squirtle",
   name: "Jared",
   password: "123456",
-  headshot_url: "http://res.cloudinary.com/smilejl/image/upload/v1504390099/pixelpusher%20screenshots/jared.png"
+  headshot_url: "https://res.cloudinary.com/smilejl/image/upload/v1504390099/pixelpusher%20screenshots/jared.png"
   )
 
 user4 = User.create!(
@@ -45,7 +45,7 @@ user6 = User.create!(
   name: "Janet Lee",
   password: "123456",
   bio: "Travel makes the year last longer",
-  headshot_url: "http://res.cloudinary.com/smilejl/image/upload/v1504390608/pixelpusher%20screenshots/janet2.png
+  headshot_url: "https://res.cloudinary.com/smilejl/image/upload/v1504390608/pixelpusher%20screenshots/janet2.png
 "
 )
 

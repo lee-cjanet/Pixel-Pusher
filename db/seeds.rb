@@ -525,3 +525,50 @@ img_54 = Photo.create!(
   user_id: user4.id,
   location_id: location1.id
 )
+
+
+# ====================================================================
+# 1 DEFAULT USER
+
+
+img_55 = Photo.create!(
+  title: "Real life Staryu",
+  image_url: "https://res.cloudinary.com/smilejl/image/upload/c_scale,w_650/v1506058890/profiles/defaultUser/amy-227515.jpg",
+  user_id: user1.id,
+  location_id: location1.id
+)
+
+img_56 = Photo.create!(
+  title: "Where did everyone go?",
+  image_url: "https://res.cloudinary.com/smilejl/image/upload/c_scale,w_650/v1506058888/profiles/defaultUser/syd-sujuaan-293256.jpg",
+  user_id: user1.id,
+  location_id: location1.id
+)
+
+img_57 = Photo.create!(
+  title: "Looking for Lunch",
+  image_url: "https://res.cloudinary.com/smilejl/image/upload/c_scale,w_650/v1506058885/profiles/defaultUser/zoltan-kovacs-361907.jpg",
+  user_id: user1.id,
+  location_id: location1.id
+)
+
+img_58 = Photo.create!(
+  title: "Not for Santa",
+  image_url: "https://res.cloudinary.com/smilejl/image/upload/c_scale,w_650/v1506058892/profiles/defaultUser/jennifer-pallian-146562.jpg",
+  user_id: user1.id,
+  location_id: location1.id
+)
+
+img_59 = Photo.create!(
+  title: "Home Security System",
+  image_url: "https://res.cloudinary.com/smilejl/image/upload/c_scale,w_650/v1506058864/profiles/defaultUser/paul-279366.jpg",
+  user_id: user1.id,
+  location_id: location1.id
+)
+
+img_60 = Photo.create!(
+  title: "Can you hear me now?",
+  image_url: "https://res.cloudinary.com/smilejl/image/upload/c_scale,w_650/v1506058892/profiles/defaultUser/martin-jernberg-80106.jpg",
+  user_id: user1.id,
+  location_id: location1.id
+)

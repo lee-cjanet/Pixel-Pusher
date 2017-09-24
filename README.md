@@ -22,6 +22,8 @@ Pixel Pusher is a full-stack web application inspired by 500px. It utilizes Ruby
 
   * Modal components
 
+  * Follow users
+
 ----
 ### Overview
 
@@ -32,6 +34,8 @@ Pixel Pusher is a full-stack web application inspired by 500px. It utilizes Ruby
   * Users can upload high resolution photos.
 
   * Uploaded photos appear on the user's profile page in a grid format
+
+  * Users can follow or unfollow other photographers
 ----
 ### Landing Page
 
@@ -82,7 +86,6 @@ ______
 
   * User can edit personal profile
 
-  * User can follow other photographers
 
 
 ___

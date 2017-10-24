@@ -27,4 +27,5 @@ export default connect(
 
 const mapDispatchToProps = dispatch => ({
   updateUser: (user, id) => dispatch(updateUser(user, id)),
-  receiveUserErrors: (errors) => dispatch(receiveUserErrors(errors))
+  receiveUserErrors: (errors) => dispatch(receiveUserErrors(errors)
+)}
